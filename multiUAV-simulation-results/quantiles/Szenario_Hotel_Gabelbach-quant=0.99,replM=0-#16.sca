@@ -1,0 +1,2077 @@
+version 2
+run Szenario_Hotel_Gabelbach-112-20180708-02:12:40-45316
+attr configname Szenario_Hotel_Gabelbach
+attr datetime 20180708-02:12:40
+attr experiment Szenario_Hotel_Gabelbach
+attr inifile omnetpp.ini
+attr iterationvars "$quant=0.99, $replM=0"
+attr iterationvarsf quant=0.99,replM=0-
+attr measurement "$quant=0.99, $replM=0"
+attr network OsgEarthNet
+attr processid 45316
+attr repetition 16
+attr replication #16
+attr resultdir results
+attr runnumber 112
+attr seedset 112
+itervar quant 0.99
+itervar replM 0
+param *.osgEarthScene.scene "\"Szenario_Hotel_Gabelbach.earth\""
+param *.playgroundLatitude 50.6830269
+param *.playgroundLongitude 10.8538055
+param *.playgroundWidth 3500m
+param *.playgroundHeight 3500m
+param *.numCSs 3
+param *.numUAVs 100
+param *.cs[0].posX 3537m
+param *.cs[0].posY 965m
+param *.cs[0].posZ 538m
+param *.cs[1].posX 312m
+param *.cs[1].posY 1262m
+param *.cs[1].posZ 539m
+param *.cs[2].posX 2185m
+param *.cs[2].posY 3026m
+param *.cs[2].posZ 777m
+param *.uav[*].predictionQuantile 0.99
+param *.uav[*].replacementMethod 0
+param *.*.timeStep 10s
+param *.uav[*].commandPreviewCommandCount 20
+param *.missionControl.missionFiles "\"missions\\\\Szenario_WB_Hotel_Gabelbach_Mission_Hotel.waypoints,missions\\\\Szenario_WB_Hotel_Gabelbach_Mission_Kickelhahn.waypoints,missions\\\\Szenario_WB_Hotel_Gabelbach_Mission_Ilmenau_Sportplatz.waypoints,missions\\\\Szenario_WB_Hotel_Gabelbach_Mission_Manebach_Mitte.waypoints,missions\\\\Szenario_WB_Hotel_Gabelbach_Mission_Manebach_Sued.waypoints,missions\\\\Szenario_WB_Hotel_Gabelbach_Hover_HoheSchlaufe.waypoints,missions\\\\Szenario_WB_Hotel_Gabelbach_Hover_Kickelhahn.waypoints,missions\\\\Szenario_WB_Hotel_Gabelbach_Hover_Gabelbachskopf.waypoints,missions\\\\Szenario_WB_Hotel_Gabelbach_Hover_Dachskopf.waypoints\""
+param *.uav[0].startX 3537m
+param *.uav[0].startY 965m
+param *.uav[0].startZ 539m
+param *.uav[1].startX 312m
+param *.uav[1].startY 1262m
+param *.uav[1].startZ 540m
+param *.uav[2].startX 2185m
+param *.uav[2].startY 3026m
+param *.uav[2].startZ 778m
+param *.uav[3].startX 3537m
+param *.uav[3].startY 965m
+param *.uav[3].startZ 539m
+param *.uav[4].startX 312m
+param *.uav[4].startY 1262m
+param *.uav[4].startZ 540m
+param *.uav[5].startX 2185m
+param *.uav[5].startY 3026m
+param *.uav[5].startZ 778m
+param *.uav[6].startX 3537m
+param *.uav[6].startY 965m
+param *.uav[6].startZ 539m
+param *.uav[7].startX 312m
+param *.uav[7].startY 1262m
+param *.uav[7].startZ 540m
+param *.uav[8].startX 2185m
+param *.uav[8].startY 3026m
+param *.uav[8].startZ 778m
+param *.uav[9].startX 3537m
+param *.uav[9].startY 965m
+param *.uav[9].startZ 539m
+param *.uav[10].startX 3537m
+param *.uav[10].startY 965m
+param *.uav[10].startZ 539m
+param *.uav[11].startX 312m
+param *.uav[11].startY 1262m
+param *.uav[11].startZ 540m
+param *.uav[12].startX 2185m
+param *.uav[12].startY 3026m
+param *.uav[12].startZ 778m
+param *.uav[13].startX 3537m
+param *.uav[13].startY 965m
+param *.uav[13].startZ 539m
+param *.uav[14].startX 312m
+param *.uav[14].startY 1262m
+param *.uav[14].startZ 540m
+param *.uav[15].startX 2185m
+param *.uav[15].startY 3026m
+param *.uav[15].startZ 778m
+param *.uav[16].startX 3537m
+param *.uav[16].startY 965m
+param *.uav[16].startZ 539m
+param *.uav[17].startX 312m
+param *.uav[17].startY 1262m
+param *.uav[17].startZ 540m
+param *.uav[18].startX 2185m
+param *.uav[18].startY 3026m
+param *.uav[18].startZ 778m
+param *.uav[19].startX 3537m
+param *.uav[19].startY 965m
+param *.uav[19].startZ 539m
+param *.uav[20].startX 3537m
+param *.uav[20].startY 965m
+param *.uav[20].startZ 539m
+param *.uav[21].startX 312m
+param *.uav[21].startY 1262m
+param *.uav[21].startZ 540m
+param *.uav[22].startX 2185m
+param *.uav[22].startY 3026m
+param *.uav[22].startZ 778m
+param *.uav[23].startX 3537m
+param *.uav[23].startY 965m
+param *.uav[23].startZ 539m
+param *.uav[24].startX 312m
+param *.uav[24].startY 1262m
+param *.uav[24].startZ 540m
+param *.uav[25].startX 2185m
+param *.uav[25].startY 3026m
+param *.uav[25].startZ 778m
+param *.uav[26].startX 3537m
+param *.uav[26].startY 965m
+param *.uav[26].startZ 539m
+param *.uav[27].startX 312m
+param *.uav[27].startY 1262m
+param *.uav[27].startZ 540m
+param *.uav[28].startX 2185m
+param *.uav[28].startY 3026m
+param *.uav[28].startZ 778m
+param *.uav[29].startX 3537m
+param *.uav[29].startY 965m
+param *.uav[29].startZ 539m
+param *.uav[30].startX 3537m
+param *.uav[30].startY 965m
+param *.uav[30].startZ 539m
+param *.uav[31].startX 312m
+param *.uav[31].startY 1262m
+param *.uav[31].startZ 540m
+param *.uav[32].startX 2185m
+param *.uav[32].startY 3026m
+param *.uav[32].startZ 778m
+param *.uav[33].startX 3537m
+param *.uav[33].startY 965m
+param *.uav[33].startZ 539m
+param *.uav[34].startX 312m
+param *.uav[34].startY 1262m
+param *.uav[34].startZ 540m
+param *.uav[35].startX 2185m
+param *.uav[35].startY 3026m
+param *.uav[35].startZ 778m
+param *.uav[36].startX 3537m
+param *.uav[36].startY 965m
+param *.uav[36].startZ 539m
+param *.uav[37].startX 312m
+param *.uav[37].startY 1262m
+param *.uav[37].startZ 540m
+param *.uav[38].startX 2185m
+param *.uav[38].startY 3026m
+param *.uav[38].startZ 778m
+param *.uav[39].startX 3537m
+param *.uav[39].startY 965m
+param *.uav[39].startZ 539m
+param *.uav[40].startX 3537m
+param *.uav[40].startY 965m
+param *.uav[40].startZ 539m
+param *.uav[41].startX 312m
+param *.uav[41].startY 1262m
+param *.uav[41].startZ 540m
+param *.uav[42].startX 2185m
+param *.uav[42].startY 3026m
+param *.uav[42].startZ 778m
+param *.uav[43].startX 3537m
+param *.uav[43].startY 965m
+param *.uav[43].startZ 539m
+param *.uav[44].startX 312m
+param *.uav[44].startY 1262m
+param *.uav[44].startZ 540m
+param *.uav[45].startX 2185m
+param *.uav[45].startY 3026m
+param *.uav[45].startZ 778m
+param *.uav[46].startX 3537m
+param *.uav[46].startY 965m
+param *.uav[46].startZ 539m
+param *.uav[47].startX 312m
+param *.uav[47].startY 1262m
+param *.uav[47].startZ 540m
+param *.uav[48].startX 2185m
+param *.uav[48].startY 3026m
+param *.uav[48].startZ 778m
+param *.uav[49].startX 3537m
+param *.uav[49].startY 965m
+param *.uav[49].startZ 539m
+param *.uav[50].startX 3537m
+param *.uav[50].startY 965m
+param *.uav[50].startZ 539m
+param *.uav[51].startX 312m
+param *.uav[51].startY 1262m
+param *.uav[51].startZ 540m
+param *.uav[52].startX 2185m
+param *.uav[52].startY 3026m
+param *.uav[52].startZ 778m
+param *.uav[53].startX 3537m
+param *.uav[53].startY 965m
+param *.uav[53].startZ 539m
+param *.uav[54].startX 312m
+param *.uav[54].startY 1262m
+param *.uav[54].startZ 540m
+param *.uav[55].startX 2185m
+param *.uav[55].startY 3026m
+param *.uav[55].startZ 778m
+param *.uav[56].startX 3537m
+param *.uav[56].startY 965m
+param *.uav[56].startZ 539m
+param *.uav[57].startX 312m
+param *.uav[57].startY 1262m
+param *.uav[57].startZ 540m
+param *.uav[58].startX 2185m
+param *.uav[58].startY 3026m
+param *.uav[58].startZ 778m
+param *.uav[59].startX 3537m
+param *.uav[59].startY 965m
+param *.uav[59].startZ 539m
+param *.uav[60].startX 3537m
+param *.uav[60].startY 965m
+param *.uav[60].startZ 539m
+param *.uav[61].startX 312m
+param *.uav[61].startY 1262m
+param *.uav[61].startZ 540m
+param *.uav[62].startX 2185m
+param *.uav[62].startY 3026m
+param *.uav[62].startZ 778m
+param *.uav[63].startX 3537m
+param *.uav[63].startY 965m
+param *.uav[63].startZ 539m
+param *.uav[64].startX 312m
+param *.uav[64].startY 1262m
+param *.uav[64].startZ 540m
+param *.uav[65].startX 2185m
+param *.uav[65].startY 3026m
+param *.uav[65].startZ 778m
+param *.uav[66].startX 3537m
+param *.uav[66].startY 965m
+param *.uav[66].startZ 539m
+param *.uav[67].startX 312m
+param *.uav[67].startY 1262m
+param *.uav[67].startZ 540m
+param *.uav[68].startX 2185m
+param *.uav[68].startY 3026m
+param *.uav[68].startZ 778m
+param *.uav[69].startX 3537m
+param *.uav[69].startY 965m
+param *.uav[69].startZ 539m
+param *.uav[70].startX 3537m
+param *.uav[70].startY 965m
+param *.uav[70].startZ 539m
+param *.uav[71].startX 312m
+param *.uav[71].startY 1262m
+param *.uav[71].startZ 540m
+param *.uav[72].startX 2185m
+param *.uav[72].startY 3026m
+param *.uav[72].startZ 778m
+param *.uav[73].startX 3537m
+param *.uav[73].startY 965m
+param *.uav[73].startZ 539m
+param *.uav[74].startX 312m
+param *.uav[74].startY 1262m
+param *.uav[74].startZ 540m
+param *.uav[75].startX 2185m
+param *.uav[75].startY 3026m
+param *.uav[75].startZ 778m
+param *.uav[76].startX 3537m
+param *.uav[76].startY 965m
+param *.uav[76].startZ 539m
+param *.uav[77].startX 312m
+param *.uav[77].startY 1262m
+param *.uav[77].startZ 540m
+param *.uav[78].startX 2185m
+param *.uav[78].startY 3026m
+param *.uav[78].startZ 778m
+param *.uav[79].startX 3537m
+param *.uav[79].startY 965m
+param *.uav[79].startZ 539m
+param *.uav[80].startX 3537m
+param *.uav[80].startY 965m
+param *.uav[80].startZ 539m
+param *.uav[81].startX 312m
+param *.uav[81].startY 1262m
+param *.uav[81].startZ 540m
+param *.uav[82].startX 2185m
+param *.uav[82].startY 3026m
+param *.uav[82].startZ 778m
+param *.uav[83].startX 3537m
+param *.uav[83].startY 965m
+param *.uav[83].startZ 539m
+param *.uav[84].startX 312m
+param *.uav[84].startY 1262m
+param *.uav[84].startZ 540m
+param *.uav[85].startX 2185m
+param *.uav[85].startY 3026m
+param *.uav[85].startZ 778m
+param *.uav[86].startX 3537m
+param *.uav[86].startY 965m
+param *.uav[86].startZ 539m
+param *.uav[87].startX 312m
+param *.uav[87].startY 1262m
+param *.uav[87].startZ 540m
+param *.uav[88].startX 2185m
+param *.uav[88].startY 3026m
+param *.uav[88].startZ 778m
+param *.uav[89].startX 3537m
+param *.uav[89].startY 965m
+param *.uav[89].startZ 539m
+param *.uav[90].startX 3537m
+param *.uav[90].startY 965m
+param *.uav[90].startZ 539m
+param *.uav[91].startX 312m
+param *.uav[91].startY 1262m
+param *.uav[91].startZ 540m
+param *.uav[92].startX 2185m
+param *.uav[92].startY 3026m
+param *.uav[92].startZ 778m
+param *.uav[93].startX 3537m
+param *.uav[93].startY 965m
+param *.uav[93].startZ 539m
+param *.uav[94].startX 312m
+param *.uav[94].startY 1262m
+param *.uav[94].startZ 540m
+param *.uav[95].startX 2185m
+param *.uav[95].startY 3026m
+param *.uav[95].startZ 778m
+param *.uav[96].startX 3537m
+param *.uav[96].startY 965m
+param *.uav[96].startZ 539m
+param *.uav[97].startX 312m
+param *.uav[97].startY 1262m
+param *.uav[97].startZ 540m
+param *.uav[98].startX 2185m
+param *.uav[98].startY 3026m
+param *.uav[98].startZ 778m
+param *.uav[99].startX 3537m
+param *.uav[99].startY 965m
+param *.uav[99].startZ 539m
+param *.osgEarthScene.scene "\"boston.earth\""
+param *.playgroundLatitude 42.3558
+param *.playgroundLongitude -71.0677
+param *.playgroundWidth 400m
+param *.playgroundHeight 200m
+param *.channelController.connectionColor "\"#0000FF40\""
+param *.channelController.showConnections false
+param *.uav[*].modelURL "\"quadrocopter.small.obj.15.scale.0,0,90.rot\""
+param *.uav[*].labelColor "\"#FF7C00CC\""
+param *.uav[*].label2Color "\"#FF7C00EE\""
+param *.uav[*].batteryCapacity 5200mAh
+param *.uav[*].batteryRemaining uav[index].batteryCapacity
+param *.uav[*].predictionQuantile 0.95
+param *.uav[*].replacementMethod 2
+param *.uav[*].weightedSumWeight 0.5
+param *.cs[*].modelURL "\"chargingstation_v1.osgt.1.scale.0,0,0.rot.0,0,-15e-1.trans\""
+param *.cs[*].spotsWaiting 999
+param *.cs[*].spotsCharging 999
+param *.cs[*].chargeEffectivenessPercentage 100
+param *.cs[*].nonLinearPhaseStartPercentage 85
+param *.cs[*].chargeCurrent 6.0A
+param *.cs[*].prioritizeFastCharge true
+param *.missionControl.replacementSearchMethod 0
+param *.*.timeStep 9s
+
+scalar OsgEarthNet.uav[0] utilizationSecMission 20136.560465581
+scalar OsgEarthNet.uav[0] utilizationSecMaintenance 20205.035990301
+scalar OsgEarthNet.uav[0] utilizationSecCharge 144890
+scalar OsgEarthNet.uav[0] utilizationSecIdle 73968.402544118
+scalar OsgEarthNet.uav[0] utilizationEnergyMission 99075.824417453
+scalar OsgEarthNet.uav[0] utilizationEnergyMaintenance 93998.863090515
+scalar OsgEarthNet.uav[0] utilizationEnergyCharge 188804.08154297
+scalar OsgEarthNet.uav[0] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[0] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[0] utilizationCountMissions 45
+scalar OsgEarthNet.uav[0] utilizationCountManeuversMission 623
+scalar OsgEarthNet.uav[0] utilizationCountManeuversMaintenance 91
+scalar OsgEarthNet.uav[0] utilizationCountChargeState 45
+scalar OsgEarthNet.uav[0] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[0] utilizationCountIdleState 46
+scalar OsgEarthNet.uav[0] utilizationFail 0
+scalar OsgEarthNet.uav[0] simulationTime 259200
+scalar OsgEarthNet.uav[1] utilizationSecMission 16853.572491131
+scalar OsgEarthNet.uav[1] utilizationSecMaintenance 19850.547728759
+scalar OsgEarthNet.uav[1] utilizationSecCharge 132165.95763756
+scalar OsgEarthNet.uav[1] utilizationSecIdle 90329.921142547
+scalar OsgEarthNet.uav[1] utilizationEnergyMission 81456.673179626
+scalar OsgEarthNet.uav[1] utilizationEnergyMaintenance 93456.729194641
+scalar OsgEarthNet.uav[1] utilizationEnergyCharge 173139.46801758
+scalar OsgEarthNet.uav[1] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[1] utilizationEnergyOverdrawMaintenance 548.18716430664
+scalar OsgEarthNet.uav[1] utilizationCountMissions 41
+scalar OsgEarthNet.uav[1] utilizationCountManeuversMission 569
+scalar OsgEarthNet.uav[1] utilizationCountManeuversMaintenance 82
+scalar OsgEarthNet.uav[1] utilizationCountChargeState 41
+scalar OsgEarthNet.uav[1] utilizationCountOverdrawnAfterMission 2
+scalar OsgEarthNet.uav[1] utilizationCountIdleState 41
+scalar OsgEarthNet.uav[1] utilizationFail 0
+scalar OsgEarthNet.uav[1] simulationTime 259200
+scalar OsgEarthNet.uav[2] utilizationSecMission 12914.94988791
+scalar OsgEarthNet.uav[2] utilizationSecMaintenance 12932.12531118
+scalar OsgEarthNet.uav[2] utilizationSecCharge 91710
+scalar OsgEarthNet.uav[2] utilizationSecIdle 141642.92380091
+scalar OsgEarthNet.uav[2] utilizationEnergyMission 63016.262365738
+scalar OsgEarthNet.uav[2] utilizationEnergyMaintenance 59772.859527588
+scalar OsgEarthNet.uav[2] utilizationEnergyCharge 119643.65942383
+scalar OsgEarthNet.uav[2] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[2] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[2] utilizationCountMissions 28
+scalar OsgEarthNet.uav[2] utilizationCountManeuversMission 367
+scalar OsgEarthNet.uav[2] utilizationCountManeuversMaintenance 57
+scalar OsgEarthNet.uav[2] utilizationCountChargeState 28
+scalar OsgEarthNet.uav[2] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[2] utilizationCountIdleState 29
+scalar OsgEarthNet.uav[2] utilizationFail 0
+scalar OsgEarthNet.uav[2] simulationTime 259200
+scalar OsgEarthNet.uav[3] utilizationSecMission 22130.724550572
+scalar OsgEarthNet.uav[3] utilizationSecMaintenance 26640.889704014
+scalar OsgEarthNet.uav[3] utilizationSecCharge 180066.37774541
+scalar OsgEarthNet.uav[3] utilizationSecIdle 30362.007
+scalar OsgEarthNet.uav[3] utilizationEnergyMission 108023.5623436
+scalar OsgEarthNet.uav[3] utilizationEnergyMaintenance 124353.78943253
+scalar OsgEarthNet.uav[3] utilizationEnergyCharge 234087.88989258
+scalar OsgEarthNet.uav[3] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[3] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[3] utilizationCountMissions 56
+scalar OsgEarthNet.uav[3] utilizationCountManeuversMission 817
+scalar OsgEarthNet.uav[3] utilizationCountManeuversMaintenance 112
+scalar OsgEarthNet.uav[3] utilizationCountChargeState 56
+scalar OsgEarthNet.uav[3] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[3] utilizationCountIdleState 56
+scalar OsgEarthNet.uav[3] utilizationFail 0
+scalar OsgEarthNet.uav[3] simulationTime 259200
+scalar OsgEarthNet.uav[4] utilizationSecMission 19814.16515937
+scalar OsgEarthNet.uav[4] utilizationSecMaintenance 21853.82384063
+scalar OsgEarthNet.uav[4] utilizationSecCharge 152170
+scalar OsgEarthNet.uav[4] utilizationSecIdle 65362.01
+scalar OsgEarthNet.uav[4] utilizationEnergyMission 97627.755143817
+scalar OsgEarthNet.uav[4] utilizationEnergyMaintenance 101912.14776611
+scalar OsgEarthNet.uav[4] utilizationEnergyCharge 196232.95507812
+scalar OsgEarthNet.uav[4] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[4] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[4] utilizationCountMissions 48
+scalar OsgEarthNet.uav[4] utilizationCountManeuversMission 730
+scalar OsgEarthNet.uav[4] utilizationCountManeuversMaintenance 97
+scalar OsgEarthNet.uav[4] utilizationCountChargeState 48
+scalar OsgEarthNet.uav[4] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[4] utilizationCountIdleState 49
+scalar OsgEarthNet.uav[4] utilizationFail 0
+scalar OsgEarthNet.uav[4] simulationTime 259200
+scalar OsgEarthNet.uav[5] utilizationSecMission 22691.215906896
+scalar OsgEarthNet.uav[5] utilizationSecMaintenance 18532.249616431
+scalar OsgEarthNet.uav[5] utilizationSecCharge 147730
+scalar OsgEarthNet.uav[5] utilizationSecIdle 70246.533476673
+scalar OsgEarthNet.uav[5] utilizationEnergyMission 106132.76673508
+scalar OsgEarthNet.uav[5] utilizationEnergyMaintenance 87282.941387176
+scalar OsgEarthNet.uav[5] utilizationEnergyCharge 193201.50048828
+scalar OsgEarthNet.uav[5] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[5] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[5] utilizationCountMissions 45
+scalar OsgEarthNet.uav[5] utilizationCountManeuversMission 596
+scalar OsgEarthNet.uav[5] utilizationCountManeuversMaintenance 90
+scalar OsgEarthNet.uav[5] utilizationCountChargeState 45
+scalar OsgEarthNet.uav[5] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[5] utilizationCountIdleState 46
+scalar OsgEarthNet.uav[5] utilizationFail 0
+scalar OsgEarthNet.uav[5] simulationTime 259200
+scalar OsgEarthNet.uav[6] utilizationSecMission 22013.860529059
+scalar OsgEarthNet.uav[6] utilizationSecMaintenance 23598.118421146
+scalar OsgEarthNet.uav[6] utilizationSecCharge 164184.00076489
+scalar OsgEarthNet.uav[6] utilizationSecIdle 49404.019284907
+scalar OsgEarthNet.uav[6] utilizationEnergyMission 106269.94257355
+scalar OsgEarthNet.uav[6] utilizationEnergyMaintenance 109121.53769302
+scalar OsgEarthNet.uav[6] utilizationEnergyCharge 214560.81665039
+scalar OsgEarthNet.uav[6] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[6] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[6] utilizationCountMissions 51
+scalar OsgEarthNet.uav[6] utilizationCountManeuversMission 665
+scalar OsgEarthNet.uav[6] utilizationCountManeuversMaintenance 102
+scalar OsgEarthNet.uav[6] utilizationCountChargeState 51
+scalar OsgEarthNet.uav[6] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[6] utilizationCountIdleState 51
+scalar OsgEarthNet.uav[6] utilizationFail 0
+scalar OsgEarthNet.uav[6] simulationTime 259200
+scalar OsgEarthNet.uav[7] utilizationSecMission 22746.829779994
+scalar OsgEarthNet.uav[7] utilizationSecMaintenance 25639.06682864
+scalar OsgEarthNet.uav[7] utilizationSecCharge 173252.09539137
+scalar OsgEarthNet.uav[7] utilizationSecIdle 37562.007
+scalar OsgEarthNet.uav[7] utilizationEnergyMission 109482.32109833
+scalar OsgEarthNet.uav[7] utilizationEnergyMaintenance 119329.4708786
+scalar OsgEarthNet.uav[7] utilizationEnergyCharge 226092.5213623
+scalar OsgEarthNet.uav[7] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[7] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[7] utilizationCountMissions 54
+scalar OsgEarthNet.uav[7] utilizationCountManeuversMission 710
+scalar OsgEarthNet.uav[7] utilizationCountManeuversMaintenance 108
+scalar OsgEarthNet.uav[7] utilizationCountChargeState 54
+scalar OsgEarthNet.uav[7] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[7] utilizationCountIdleState 54
+scalar OsgEarthNet.uav[7] utilizationFail 0
+scalar OsgEarthNet.uav[7] simulationTime 259200
+scalar OsgEarthNet.uav[8] utilizationSecMission 24164.568561515
+scalar OsgEarthNet.uav[8] utilizationSecMaintenance 25508.938218192
+scalar OsgEarthNet.uav[8] utilizationSecCharge 182100
+scalar OsgEarthNet.uav[8] utilizationSecIdle 27426.492220293
+scalar OsgEarthNet.uav[8] utilizationEnergyMission 116396.76756668
+scalar OsgEarthNet.uav[8] utilizationEnergyMaintenance 118706.32347107
+scalar OsgEarthNet.uav[8] utilizationEnergyCharge 235407.25561523
+scalar OsgEarthNet.uav[8] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[8] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[8] utilizationCountMissions 57
+scalar OsgEarthNet.uav[8] utilizationCountManeuversMission 803
+scalar OsgEarthNet.uav[8] utilizationCountManeuversMaintenance 114
+scalar OsgEarthNet.uav[8] utilizationCountChargeState 57
+scalar OsgEarthNet.uav[8] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[8] utilizationCountIdleState 58
+scalar OsgEarthNet.uav[8] utilizationFail 0
+scalar OsgEarthNet.uav[8] simulationTime 259200
+scalar OsgEarthNet.uav[9] utilizationSecMission 24869.432068423
+scalar OsgEarthNet.uav[9] utilizationSecMaintenance 21640.052864803
+scalar OsgEarthNet.uav[9] utilizationSecCharge 168760
+scalar OsgEarthNet.uav[9] utilizationSecIdle 43930.514066774
+scalar OsgEarthNet.uav[9] utilizationEnergyMission 120594.99214554
+scalar OsgEarthNet.uav[9] utilizationEnergyMaintenance 99946.165161133
+scalar OsgEarthNet.uav[9] utilizationEnergyCharge 219643.83178711
+scalar OsgEarthNet.uav[9] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[9] utilizationEnergyOverdrawMaintenance 139.88084411621
+scalar OsgEarthNet.uav[9] utilizationCountMissions 52
+scalar OsgEarthNet.uav[9] utilizationCountManeuversMission 805
+scalar OsgEarthNet.uav[9] utilizationCountManeuversMaintenance 104
+scalar OsgEarthNet.uav[9] utilizationCountChargeState 52
+scalar OsgEarthNet.uav[9] utilizationCountOverdrawnAfterMission 1
+scalar OsgEarthNet.uav[9] utilizationCountIdleState 53
+scalar OsgEarthNet.uav[9] utilizationFail 0
+scalar OsgEarthNet.uav[9] simulationTime 259200
+scalar OsgEarthNet.uav[10] utilizationSecMission 10126.034463825
+scalar OsgEarthNet.uav[10] utilizationSecMaintenance 10838.057341218
+scalar OsgEarthNet.uav[10] utilizationSecCharge 77070
+scalar OsgEarthNet.uav[10] utilizationSecIdle 161165.90719496
+scalar OsgEarthNet.uav[10] utilizationEnergyMission 48542.982387543
+scalar OsgEarthNet.uav[10] utilizationEnergyMaintenance 50767.18208313
+scalar OsgEarthNet.uav[10] utilizationEnergyCharge 100004.63842773
+scalar OsgEarthNet.uav[10] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[10] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[10] utilizationCountMissions 24
+scalar OsgEarthNet.uav[10] utilizationCountManeuversMission 365
+scalar OsgEarthNet.uav[10] utilizationCountManeuversMaintenance 48
+scalar OsgEarthNet.uav[10] utilizationCountChargeState 24
+scalar OsgEarthNet.uav[10] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[10] utilizationCountIdleState 25
+scalar OsgEarthNet.uav[10] utilizationFail 0
+scalar OsgEarthNet.uav[10] simulationTime 259200
+scalar OsgEarthNet.uav[11] utilizationSecMission 17825.754851155
+scalar OsgEarthNet.uav[11] utilizationSecMaintenance 19497.193453826
+scalar OsgEarthNet.uav[11] utilizationSecCharge 135034.96248905
+scalar OsgEarthNet.uav[11] utilizationSecIdle 86842.088205967
+scalar OsgEarthNet.uav[11] utilizationEnergyMission 86691.404285431
+scalar OsgEarthNet.uav[11] utilizationEnergyMaintenance 91371.837394714
+scalar OsgEarthNet.uav[11] utilizationEnergyCharge 176998.66601562
+scalar OsgEarthNet.uav[11] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[11] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[11] utilizationCountMissions 41
+scalar OsgEarthNet.uav[11] utilizationCountManeuversMission 476
+scalar OsgEarthNet.uav[11] utilizationCountManeuversMaintenance 82
+scalar OsgEarthNet.uav[11] utilizationCountChargeState 41
+scalar OsgEarthNet.uav[11] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[11] utilizationCountIdleState 41
+scalar OsgEarthNet.uav[11] utilizationFail 0
+scalar OsgEarthNet.uav[11] simulationTime 259200
+scalar OsgEarthNet.uav[12] utilizationSecMission 9951.7997311319
+scalar OsgEarthNet.uav[12] utilizationSecMaintenance 9141.7014039512
+scalar OsgEarthNet.uav[12] utilizationSecCharge 70150
+scalar OsgEarthNet.uav[12] utilizationSecIdle 169956.49786492
+scalar OsgEarthNet.uav[12] utilizationEnergyMission 49605.554626465
+scalar OsgEarthNet.uav[12] utilizationEnergyMaintenance 42551.744777679
+scalar OsgEarthNet.uav[12] utilizationEnergyCharge 91066.354003906
+scalar OsgEarthNet.uav[12] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[12] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[12] utilizationCountMissions 22
+scalar OsgEarthNet.uav[12] utilizationCountManeuversMission 348
+scalar OsgEarthNet.uav[12] utilizationCountManeuversMaintenance 44
+scalar OsgEarthNet.uav[12] utilizationCountChargeState 22
+scalar OsgEarthNet.uav[12] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[12] utilizationCountIdleState 23
+scalar OsgEarthNet.uav[12] utilizationFail 0
+scalar OsgEarthNet.uav[12] simulationTime 259200
+scalar OsgEarthNet.uav[13] utilizationSecMission 25769.907094285
+scalar OsgEarthNet.uav[13] utilizationSecMaintenance 25719.752656744
+scalar OsgEarthNet.uav[13] utilizationSecCharge 186598.33824897
+scalar OsgEarthNet.uav[13] utilizationSecIdle 21112.001
+scalar OsgEarthNet.uav[13] utilizationEnergyMission 127091.65644073
+scalar OsgEarthNet.uav[13] utilizationEnergyMaintenance 119776.39641953
+scalar OsgEarthNet.uav[13] utilizationEnergyCharge 243632.06567383
+scalar OsgEarthNet.uav[13] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[13] utilizationEnergyOverdrawMaintenance 274.82754516602
+scalar OsgEarthNet.uav[13] utilizationCountMissions 58
+scalar OsgEarthNet.uav[13] utilizationCountManeuversMission 838
+scalar OsgEarthNet.uav[13] utilizationCountManeuversMaintenance 116
+scalar OsgEarthNet.uav[13] utilizationCountChargeState 58
+scalar OsgEarthNet.uav[13] utilizationCountOverdrawnAfterMission 1
+scalar OsgEarthNet.uav[13] utilizationCountIdleState 58
+scalar OsgEarthNet.uav[13] utilizationFail 0
+scalar OsgEarthNet.uav[13] simulationTime 259200
+scalar OsgEarthNet.uav[14] utilizationSecMission 21274.439727454
+scalar OsgEarthNet.uav[14] utilizationSecMaintenance 19985.174257932
+scalar OsgEarthNet.uav[14] utilizationSecCharge 149830
+scalar OsgEarthNet.uav[14] utilizationSecIdle 68110.385014613
+scalar OsgEarthNet.uav[14] utilizationEnergyMission 101884.74723434
+scalar OsgEarthNet.uav[14] utilizationEnergyMaintenance 93233.664447784
+scalar OsgEarthNet.uav[14] utilizationEnergyCharge 196133.95043945
+scalar OsgEarthNet.uav[14] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[14] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[14] utilizationCountMissions 46
+scalar OsgEarthNet.uav[14] utilizationCountManeuversMission 591
+scalar OsgEarthNet.uav[14] utilizationCountManeuversMaintenance 92
+scalar OsgEarthNet.uav[14] utilizationCountChargeState 46
+scalar OsgEarthNet.uav[14] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[14] utilizationCountIdleState 47
+scalar OsgEarthNet.uav[14] utilizationFail 0
+scalar OsgEarthNet.uav[14] simulationTime 259200
+scalar OsgEarthNet.uav[15] utilizationSecMission 24137.862007661
+scalar OsgEarthNet.uav[15] utilizationSecMaintenance 22799.545793274
+scalar OsgEarthNet.uav[15] utilizationSecCharge 167940.58519907
+scalar OsgEarthNet.uav[15] utilizationSecIdle 44322.006
+scalar OsgEarthNet.uav[15] utilizationEnergyMission 118517.85274124
+scalar OsgEarthNet.uav[15] utilizationEnergyMaintenance 106823.36923981
+scalar OsgEarthNet.uav[15] utilizationEnergyCharge 220359.02111816
+scalar OsgEarthNet.uav[15] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[15] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[15] utilizationCountMissions 52
+scalar OsgEarthNet.uav[15] utilizationCountManeuversMission 717
+scalar OsgEarthNet.uav[15] utilizationCountManeuversMaintenance 104
+scalar OsgEarthNet.uav[15] utilizationCountChargeState 52
+scalar OsgEarthNet.uav[15] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[15] utilizationCountIdleState 52
+scalar OsgEarthNet.uav[15] utilizationFail 0
+scalar OsgEarthNet.uav[15] simulationTime 259200
+scalar OsgEarthNet.uav[16] utilizationSecMission 19599.819363039
+scalar OsgEarthNet.uav[16] utilizationSecMaintenance 16847.920446606
+scalar OsgEarthNet.uav[16] utilizationSecCharge 131215.82892913
+scalar OsgEarthNet.uav[16] utilizationSecIdle 91536.430261223
+scalar OsgEarthNet.uav[16] utilizationEnergyMission 93321.817390442
+scalar OsgEarthNet.uav[16] utilizationEnergyMaintenance 79151.997890472
+scalar OsgEarthNet.uav[16] utilizationEnergyCharge 172136.19799805
+scalar OsgEarthNet.uav[16] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[16] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[16] utilizationCountMissions 40
+scalar OsgEarthNet.uav[16] utilizationCountManeuversMission 498
+scalar OsgEarthNet.uav[16] utilizationCountManeuversMaintenance 80
+scalar OsgEarthNet.uav[16] utilizationCountChargeState 40
+scalar OsgEarthNet.uav[16] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[16] utilizationCountIdleState 40
+scalar OsgEarthNet.uav[16] utilizationFail 0
+scalar OsgEarthNet.uav[16] simulationTime 259200
+scalar OsgEarthNet.uav[17] utilizationSecMission 25761.540268668
+scalar OsgEarthNet.uav[17] utilizationSecMaintenance 23857.946043889
+scalar OsgEarthNet.uav[17] utilizationSecCharge 181618.50768744
+scalar OsgEarthNet.uav[17] utilizationSecIdle 27962.005
+scalar OsgEarthNet.uav[17] utilizationEnergyMission 123400.20913696
+scalar OsgEarthNet.uav[17] utilizationEnergyMaintenance 111099.19086075
+scalar OsgEarthNet.uav[17] utilizationEnergyCharge 237565.63061523
+scalar OsgEarthNet.uav[17] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[17] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[17] utilizationCountMissions 56
+scalar OsgEarthNet.uav[17] utilizationCountManeuversMission 803
+scalar OsgEarthNet.uav[17] utilizationCountManeuversMaintenance 112
+scalar OsgEarthNet.uav[17] utilizationCountChargeState 56
+scalar OsgEarthNet.uav[17] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[17] utilizationCountIdleState 56
+scalar OsgEarthNet.uav[17] utilizationFail 0
+scalar OsgEarthNet.uav[17] simulationTime 259200
+scalar OsgEarthNet.uav[18] utilizationSecMission 24365.771956223
+scalar OsgEarthNet.uav[18] utilizationSecMaintenance 20669.580152851
+scalar OsgEarthNet.uav[18] utilizationSecCharge 161022.63989093
+scalar OsgEarthNet.uav[18] utilizationSecIdle 53142.007
+scalar OsgEarthNet.uav[18] utilizationEnergyMission 118600.20839691
+scalar OsgEarthNet.uav[18] utilizationEnergyMaintenance 95110.441123962
+scalar OsgEarthNet.uav[18] utilizationEnergyCharge 209117.01812744
+scalar OsgEarthNet.uav[18] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[18] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[18] utilizationCountMissions 51
+scalar OsgEarthNet.uav[18] utilizationCountManeuversMission 752
+scalar OsgEarthNet.uav[18] utilizationCountManeuversMaintenance 102
+scalar OsgEarthNet.uav[18] utilizationCountChargeState 51
+scalar OsgEarthNet.uav[18] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[18] utilizationCountIdleState 51
+scalar OsgEarthNet.uav[18] utilizationFail 0
+scalar OsgEarthNet.uav[18] simulationTime 259200
+scalar OsgEarthNet.uav[19] utilizationSecMission 17231.33688161
+scalar OsgEarthNet.uav[19] utilizationSecMaintenance 16946.902247436
+scalar OsgEarthNet.uav[19] utilizationSecCharge 124696.48828166
+scalar OsgEarthNet.uav[19] utilizationSecIdle 100325.2715893
+scalar OsgEarthNet.uav[19] utilizationEnergyMission 83496.506637573
+scalar OsgEarthNet.uav[19] utilizationEnergyMaintenance 79638.684814453
+scalar OsgEarthNet.uav[19] utilizationEnergyCharge 162921.64379883
+scalar OsgEarthNet.uav[19] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[19] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[19] utilizationCountMissions 39
+scalar OsgEarthNet.uav[19] utilizationCountManeuversMission 530
+scalar OsgEarthNet.uav[19] utilizationCountManeuversMaintenance 78
+scalar OsgEarthNet.uav[19] utilizationCountChargeState 39
+scalar OsgEarthNet.uav[19] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[19] utilizationCountIdleState 39
+scalar OsgEarthNet.uav[19] utilizationFail 0
+scalar OsgEarthNet.uav[19] simulationTime 259200
+scalar OsgEarthNet.uav[20] utilizationSecMission 23866.121358089
+scalar OsgEarthNet.uav[20] utilizationSecMaintenance 25916.410516313
+scalar OsgEarthNet.uav[20] utilizationSecCharge 179475.4611256
+scalar OsgEarthNet.uav[20] utilizationSecIdle 29942.006
+scalar OsgEarthNet.uav[20] utilizationEnergyMission 114376.06943893
+scalar OsgEarthNet.uav[20] utilizationEnergyMaintenance 121565.88724518
+scalar OsgEarthNet.uav[20] utilizationEnergyCharge 232188.06298828
+scalar OsgEarthNet.uav[20] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[20] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[20] utilizationCountMissions 57
+scalar OsgEarthNet.uav[20] utilizationCountManeuversMission 765
+scalar OsgEarthNet.uav[20] utilizationCountManeuversMaintenance 114
+scalar OsgEarthNet.uav[20] utilizationCountChargeState 57
+scalar OsgEarthNet.uav[20] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[20] utilizationCountIdleState 57
+scalar OsgEarthNet.uav[20] utilizationFail 0
+scalar OsgEarthNet.uav[20] simulationTime 259200
+scalar OsgEarthNet.uav[21] utilizationSecMission 14937.817491352
+scalar OsgEarthNet.uav[21] utilizationSecMaintenance 13848.362602439
+scalar OsgEarthNet.uav[21] utilizationSecCharge 103729.42270981
+scalar OsgEarthNet.uav[21] utilizationSecIdle 126684.3961964
+scalar OsgEarthNet.uav[21] utilizationEnergyMission 72962.739448547
+scalar OsgEarthNet.uav[21] utilizationEnergyMaintenance 63637.917526245
+scalar OsgEarthNet.uav[21] utilizationEnergyCharge 134991.55957031
+scalar OsgEarthNet.uav[21] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[21] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[21] utilizationCountMissions 33
+scalar OsgEarthNet.uav[21] utilizationCountManeuversMission 485
+scalar OsgEarthNet.uav[21] utilizationCountManeuversMaintenance 66
+scalar OsgEarthNet.uav[21] utilizationCountChargeState 33
+scalar OsgEarthNet.uav[21] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[21] utilizationCountIdleState 33
+scalar OsgEarthNet.uav[21] utilizationFail 0
+scalar OsgEarthNet.uav[21] simulationTime 259200
+scalar OsgEarthNet.uav[22] utilizationSecMission 25463.973119672
+scalar OsgEarthNet.uav[22] utilizationSecMaintenance 23056.943187918
+scalar OsgEarthNet.uav[22] utilizationSecCharge 174237.40964082
+scalar OsgEarthNet.uav[22] utilizationSecIdle 36441.673051586
+scalar OsgEarthNet.uav[22] utilizationEnergyMission 124038.80354691
+scalar OsgEarthNet.uav[22] utilizationEnergyMaintenance 106206.59579468
+scalar OsgEarthNet.uav[22] utilizationEnergyCharge 228009.04736328
+scalar OsgEarthNet.uav[22] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[22] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[22] utilizationCountMissions 54
+scalar OsgEarthNet.uav[22] utilizationCountManeuversMission 791
+scalar OsgEarthNet.uav[22] utilizationCountManeuversMaintenance 108
+scalar OsgEarthNet.uav[22] utilizationCountChargeState 54
+scalar OsgEarthNet.uav[22] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[22] utilizationCountIdleState 54
+scalar OsgEarthNet.uav[22] utilizationFail 0
+scalar OsgEarthNet.uav[22] simulationTime 259200
+scalar OsgEarthNet.uav[23] utilizationSecMission 22974.054560082
+scalar OsgEarthNet.uav[23] utilizationSecMaintenance 19467.404407368
+scalar OsgEarthNet.uav[23] utilizationSecCharge 150573.89459545
+scalar OsgEarthNet.uav[23] utilizationSecIdle 66184.645437101
+scalar OsgEarthNet.uav[23] utilizationEnergyMission 108853.8096199
+scalar OsgEarthNet.uav[23] utilizationEnergyMaintenance 91134.771533966
+scalar OsgEarthNet.uav[23] utilizationEnergyCharge 196169.6116333
+scalar OsgEarthNet.uav[23] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[23] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[23] utilizationCountMissions 47
+scalar OsgEarthNet.uav[23] utilizationCountManeuversMission 611
+scalar OsgEarthNet.uav[23] utilizationCountManeuversMaintenance 94
+scalar OsgEarthNet.uav[23] utilizationCountChargeState 47
+scalar OsgEarthNet.uav[23] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[23] utilizationCountIdleState 47
+scalar OsgEarthNet.uav[23] utilizationFail 0
+scalar OsgEarthNet.uav[23] simulationTime 259200
+scalar OsgEarthNet.uav[24] utilizationSecMission 24302.404485004
+scalar OsgEarthNet.uav[24] utilizationSecMaintenance 26433.200401567
+scalar OsgEarthNet.uav[24] utilizationSecCharge 183992.39111343
+scalar OsgEarthNet.uav[24] utilizationSecIdle 24472.003
+scalar OsgEarthNet.uav[24] utilizationEnergyMission 121447.27825165
+scalar OsgEarthNet.uav[24] utilizationEnergyMaintenance 122876.72409439
+scalar OsgEarthNet.uav[24] utilizationEnergyCharge 240272.54833984
+scalar OsgEarthNet.uav[24] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[24] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[24] utilizationCountMissions 57
+scalar OsgEarthNet.uav[24] utilizationCountManeuversMission 915
+scalar OsgEarthNet.uav[24] utilizationCountManeuversMaintenance 114
+scalar OsgEarthNet.uav[24] utilizationCountChargeState 57
+scalar OsgEarthNet.uav[24] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[24] utilizationCountIdleState 57
+scalar OsgEarthNet.uav[24] utilizationFail 0
+scalar OsgEarthNet.uav[24] simulationTime 259200
+scalar OsgEarthNet.uav[25] utilizationSecMission 25636.989229669
+scalar OsgEarthNet.uav[25] utilizationSecMaintenance 23961.150596115
+scalar OsgEarthNet.uav[25] utilizationSecCharge 179269.85817422
+scalar OsgEarthNet.uav[25] utilizationSecIdle 30332.001
+scalar OsgEarthNet.uav[25] utilizationEnergyMission 121907.03883362
+scalar OsgEarthNet.uav[25] utilizationEnergyMaintenance 111362.98134995
+scalar OsgEarthNet.uav[25] utilizationEnergyCharge 234778.83959961
+scalar OsgEarthNet.uav[25] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[25] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[25] utilizationCountMissions 55
+scalar OsgEarthNet.uav[25] utilizationCountManeuversMission 738
+scalar OsgEarthNet.uav[25] utilizationCountManeuversMaintenance 110
+scalar OsgEarthNet.uav[25] utilizationCountChargeState 55
+scalar OsgEarthNet.uav[25] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[25] utilizationCountIdleState 54
+scalar OsgEarthNet.uav[25] utilizationFail 0
+scalar OsgEarthNet.uav[25] simulationTime 259200
+scalar OsgEarthNet.uav[26] utilizationSecMission 22732.783984322
+scalar OsgEarthNet.uav[26] utilizationSecMaintenance 21695.204015678
+scalar OsgEarthNet.uav[26] utilizationSecCharge 161950
+scalar OsgEarthNet.uav[26] utilizationSecIdle 52822.011
+scalar OsgEarthNet.uav[26] utilizationEnergyMission 110650.25278473
+scalar OsgEarthNet.uav[26] utilizationEnergyMaintenance 99899.769517829
+scalar OsgEarthNet.uav[26] utilizationEnergyCharge 210722.37231445
+scalar OsgEarthNet.uav[26] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[26] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[26] utilizationCountMissions 50
+scalar OsgEarthNet.uav[26] utilizationCountManeuversMission 721
+scalar OsgEarthNet.uav[26] utilizationCountManeuversMaintenance 101
+scalar OsgEarthNet.uav[26] utilizationCountChargeState 50
+scalar OsgEarthNet.uav[26] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[26] utilizationCountIdleState 51
+scalar OsgEarthNet.uav[26] utilizationFail 0
+scalar OsgEarthNet.uav[26] simulationTime 259200
+scalar OsgEarthNet.uav[27] utilizationSecMission 21245.987195763
+scalar OsgEarthNet.uav[27] utilizationSecMaintenance 24045.329394459
+scalar OsgEarthNet.uav[27] utilizationSecCharge 166300
+scalar OsgEarthNet.uav[27] utilizationSecIdle 47608.682409778
+scalar OsgEarthNet.uav[27] utilizationEnergyMission 102880.90345001
+scalar OsgEarthNet.uav[27] utilizationEnergyMaintenance 111966.40159225
+scalar OsgEarthNet.uav[27] utilizationEnergyCharge 216684.50390625
+scalar OsgEarthNet.uav[27] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[27] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[27] utilizationCountMissions 51
+scalar OsgEarthNet.uav[27] utilizationCountManeuversMission 688
+scalar OsgEarthNet.uav[27] utilizationCountManeuversMaintenance 102
+scalar OsgEarthNet.uav[27] utilizationCountChargeState 51
+scalar OsgEarthNet.uav[27] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[27] utilizationCountIdleState 52
+scalar OsgEarthNet.uav[27] utilizationFail 0
+scalar OsgEarthNet.uav[27] simulationTime 259200
+scalar OsgEarthNet.uav[28] utilizationSecMission 24992.770489782
+scalar OsgEarthNet.uav[28] utilizationSecMaintenance 27870.374156112
+scalar OsgEarthNet.uav[28] utilizationSecCharge 188804.85435411
+scalar OsgEarthNet.uav[28] utilizationSecIdle 17532
+scalar OsgEarthNet.uav[28] utilizationEnergyMission 120087.19480133
+scalar OsgEarthNet.uav[28] utilizationEnergyMaintenance 129429.20708084
+scalar OsgEarthNet.uav[28] utilizationEnergyCharge 246412.73486328
+scalar OsgEarthNet.uav[28] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[28] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[28] utilizationCountMissions 59
+scalar OsgEarthNet.uav[28] utilizationCountManeuversMission 772
+scalar OsgEarthNet.uav[28] utilizationCountManeuversMaintenance 118
+scalar OsgEarthNet.uav[28] utilizationCountChargeState 59
+scalar OsgEarthNet.uav[28] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[28] utilizationCountIdleState 59
+scalar OsgEarthNet.uav[28] utilizationFail 0
+scalar OsgEarthNet.uav[28] simulationTime 259200
+scalar OsgEarthNet.uav[29] utilizationSecMission 1481.2405924833
+scalar OsgEarthNet.uav[29] utilizationSecMaintenance 2007.1772741136
+scalar OsgEarthNet.uav[29] utilizationSecCharge 12680
+scalar OsgEarthNet.uav[29] utilizationSecIdle 243031.5811334
+scalar OsgEarthNet.uav[29] utilizationEnergyMission 7473.8963279724
+scalar OsgEarthNet.uav[29] utilizationEnergyMaintenance 9142.6950149536
+scalar OsgEarthNet.uav[29] utilizationEnergyCharge 16405.818847656
+scalar OsgEarthNet.uav[29] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[29] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[29] utilizationCountMissions 4
+scalar OsgEarthNet.uav[29] utilizationCountManeuversMission 46
+scalar OsgEarthNet.uav[29] utilizationCountManeuversMaintenance 8
+scalar OsgEarthNet.uav[29] utilizationCountChargeState 4
+scalar OsgEarthNet.uav[29] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[29] utilizationCountIdleState 5
+scalar OsgEarthNet.uav[29] utilizationFail 0
+scalar OsgEarthNet.uav[29] simulationTime 259200
+scalar OsgEarthNet.uav[30] utilizationSecMission 23238.604783695
+scalar OsgEarthNet.uav[30] utilizationSecMaintenance 25922.233591647
+scalar OsgEarthNet.uav[30] utilizationSecCharge 175087.37549924
+scalar OsgEarthNet.uav[30] utilizationSecIdle 34951.785125416
+scalar OsgEarthNet.uav[30] utilizationEnergyMission 111349.15310669
+scalar OsgEarthNet.uav[30] utilizationEnergyMaintenance 120551.83648682
+scalar OsgEarthNet.uav[30] utilizationEnergyCharge 229163.38305664
+scalar OsgEarthNet.uav[30] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[30] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[30] utilizationCountMissions 54
+scalar OsgEarthNet.uav[30] utilizationCountManeuversMission 705
+scalar OsgEarthNet.uav[30] utilizationCountManeuversMaintenance 108
+scalar OsgEarthNet.uav[30] utilizationCountChargeState 54
+scalar OsgEarthNet.uav[30] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[30] utilizationCountIdleState 54
+scalar OsgEarthNet.uav[30] utilizationFail 0
+scalar OsgEarthNet.uav[30] simulationTime 259200
+scalar OsgEarthNet.uav[31] utilizationSecMission 24020.732465356
+scalar OsgEarthNet.uav[31] utilizationSecMaintenance 27174.687384522
+scalar OsgEarthNet.uav[31] utilizationSecCharge 189092.57815012
+scalar OsgEarthNet.uav[31] utilizationSecIdle 18912.001
+scalar OsgEarthNet.uav[31] utilizationEnergyMission 115552.10462952
+scalar OsgEarthNet.uav[31] utilizationEnergyMaintenance 128010.11797714
+scalar OsgEarthNet.uav[31] utilizationEnergyCharge 245470.90869141
+scalar OsgEarthNet.uav[31] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[31] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[31] utilizationCountMissions 58
+scalar OsgEarthNet.uav[31] utilizationCountManeuversMission 760
+scalar OsgEarthNet.uav[31] utilizationCountManeuversMaintenance 116
+scalar OsgEarthNet.uav[31] utilizationCountChargeState 58
+scalar OsgEarthNet.uav[31] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[31] utilizationCountIdleState 58
+scalar OsgEarthNet.uav[31] utilizationFail 0
+scalar OsgEarthNet.uav[31] simulationTime 259200
+scalar OsgEarthNet.uav[32] utilizationSecMission 18177.371622231
+scalar OsgEarthNet.uav[32] utilizationSecMaintenance 16688.563041763
+scalar OsgEarthNet.uav[32] utilizationSecCharge 123804.02178859
+scalar OsgEarthNet.uav[32] utilizationSecIdle 100530.04254741
+scalar OsgEarthNet.uav[32] utilizationEnergyMission 86185.38250351
+scalar OsgEarthNet.uav[32] utilizationEnergyMaintenance 77436.035705566
+scalar OsgEarthNet.uav[32] utilizationEnergyCharge 161571.0625
+scalar OsgEarthNet.uav[32] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[32] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[32] utilizationCountMissions 39
+scalar OsgEarthNet.uav[32] utilizationCountManeuversMission 525
+scalar OsgEarthNet.uav[32] utilizationCountManeuversMaintenance 78
+scalar OsgEarthNet.uav[32] utilizationCountChargeState 39
+scalar OsgEarthNet.uav[32] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[32] utilizationCountIdleState 39
+scalar OsgEarthNet.uav[32] utilizationFail 0
+scalar OsgEarthNet.uav[32] simulationTime 259200
+scalar OsgEarthNet.uav[33] utilizationSecMission 25123.473033941
+scalar OsgEarthNet.uav[33] utilizationSecMaintenance 24303.156782803
+scalar OsgEarthNet.uav[33] utilizationSecCharge 176413.42490541
+scalar OsgEarthNet.uav[33] utilizationSecIdle 33359.944277845
+scalar OsgEarthNet.uav[33] utilizationEnergyMission 123162.24650955
+scalar OsgEarthNet.uav[33] utilizationEnergyMaintenance 111950.48034286
+scalar OsgEarthNet.uav[33] utilizationEnergyCharge 230201.93615723
+scalar OsgEarthNet.uav[33] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[33] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[33] utilizationCountMissions 55
+scalar OsgEarthNet.uav[33] utilizationCountManeuversMission 732
+scalar OsgEarthNet.uav[33] utilizationCountManeuversMaintenance 110
+scalar OsgEarthNet.uav[33] utilizationCountChargeState 55
+scalar OsgEarthNet.uav[33] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[33] utilizationCountIdleState 55
+scalar OsgEarthNet.uav[33] utilizationFail 0
+scalar OsgEarthNet.uav[33] simulationTime 259200
+scalar OsgEarthNet.uav[34] utilizationSecMission 25403.335997414
+scalar OsgEarthNet.uav[34] utilizationSecMaintenance 25930.653779936
+scalar OsgEarthNet.uav[34] utilizationSecCharge 184157.48256057
+scalar OsgEarthNet.uav[34] utilizationSecIdle 23708.526662077
+scalar OsgEarthNet.uav[34] utilizationEnergyMission 122000.05405426
+scalar OsgEarthNet.uav[34] utilizationEnergyMaintenance 118949.63549042
+scalar OsgEarthNet.uav[34] utilizationEnergyCharge 240526.10864258
+scalar OsgEarthNet.uav[34] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[34] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[34] utilizationCountMissions 57
+scalar OsgEarthNet.uav[34] utilizationCountManeuversMission 750
+scalar OsgEarthNet.uav[34] utilizationCountManeuversMaintenance 114
+scalar OsgEarthNet.uav[34] utilizationCountChargeState 57
+scalar OsgEarthNet.uav[34] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[34] utilizationCountIdleState 57
+scalar OsgEarthNet.uav[34] utilizationFail 0
+scalar OsgEarthNet.uav[34] simulationTime 259200
+scalar OsgEarthNet.uav[35] utilizationSecMission 25737.839091777
+scalar OsgEarthNet.uav[35] utilizationSecMaintenance 26364.508965954
+scalar OsgEarthNet.uav[35] utilizationSecCharge 187595.65094227
+scalar OsgEarthNet.uav[35] utilizationSecIdle 19502
+scalar OsgEarthNet.uav[35] utilizationEnergyMission 124742.92451259
+scalar OsgEarthNet.uav[35] utilizationEnergyMaintenance 123430.83670807
+scalar OsgEarthNet.uav[35] utilizationEnergyCharge 245150.21533203
+scalar OsgEarthNet.uav[35] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[35] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[35] utilizationCountMissions 58
+scalar OsgEarthNet.uav[35] utilizationCountManeuversMission 756
+scalar OsgEarthNet.uav[35] utilizationCountManeuversMaintenance 115
+scalar OsgEarthNet.uav[35] utilizationCountChargeState 58
+scalar OsgEarthNet.uav[35] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[35] utilizationCountIdleState 58
+scalar OsgEarthNet.uav[35] utilizationFail 0
+scalar OsgEarthNet.uav[35] simulationTime 259200
+scalar OsgEarthNet.uav[36] utilizationSecMission 7763.9541577253
+scalar OsgEarthNet.uav[36] utilizationSecMaintenance 5591.0613955662
+scalar OsgEarthNet.uav[36] utilizationSecCharge 48140
+scalar OsgEarthNet.uav[36] utilizationSecIdle 197704.98344671
+scalar OsgEarthNet.uav[36] utilizationEnergyMission 36624.216049194
+scalar OsgEarthNet.uav[36] utilizationEnergyMaintenance 25773.571285248
+scalar OsgEarthNet.uav[36] utilizationEnergyCharge 62761.909179688
+scalar OsgEarthNet.uav[36] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[36] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[36] utilizationCountMissions 15
+scalar OsgEarthNet.uav[36] utilizationCountManeuversMission 176
+scalar OsgEarthNet.uav[36] utilizationCountManeuversMaintenance 30
+scalar OsgEarthNet.uav[36] utilizationCountChargeState 15
+scalar OsgEarthNet.uav[36] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[36] utilizationCountIdleState 16
+scalar OsgEarthNet.uav[36] utilizationFail 0
+scalar OsgEarthNet.uav[36] simulationTime 259200
+scalar OsgEarthNet.uav[37] utilizationSecMission 25899.083472421
+scalar OsgEarthNet.uav[37] utilizationSecMaintenance 26163.70437172
+scalar OsgEarthNet.uav[37] utilizationSecCharge 186942.59926634
+scalar OsgEarthNet.uav[37] utilizationSecIdle 20194.611889516
+scalar OsgEarthNet.uav[37] utilizationEnergyMission 125661.20288086
+scalar OsgEarthNet.uav[37] utilizationEnergyMaintenance 120062.25485992
+scalar OsgEarthNet.uav[37] utilizationEnergyCharge 244448.30712891
+scalar OsgEarthNet.uav[37] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[37] utilizationEnergyOverdrawMaintenance 238.32794189453
+scalar OsgEarthNet.uav[37] utilizationCountMissions 58
+scalar OsgEarthNet.uav[37] utilizationCountManeuversMission 869
+scalar OsgEarthNet.uav[37] utilizationCountManeuversMaintenance 116
+scalar OsgEarthNet.uav[37] utilizationCountChargeState 58
+scalar OsgEarthNet.uav[37] utilizationCountOverdrawnAfterMission 1
+scalar OsgEarthNet.uav[37] utilizationCountIdleState 57
+scalar OsgEarthNet.uav[37] utilizationFail 0
+scalar OsgEarthNet.uav[37] simulationTime 259200
+scalar OsgEarthNet.uav[38] utilizationSecMission 24378.386615577
+scalar OsgEarthNet.uav[38] utilizationSecMaintenance 24241.755249533
+scalar OsgEarthNet.uav[38] utilizationSecCharge 173980.4317876
+scalar OsgEarthNet.uav[38] utilizationSecIdle 36599.42534729
+scalar OsgEarthNet.uav[38] utilizationEnergyMission 118262.94639969
+scalar OsgEarthNet.uav[38] utilizationEnergyMaintenance 112382.00424957
+scalar OsgEarthNet.uav[38] utilizationEnergyCharge 227370.80175781
+scalar OsgEarthNet.uav[38] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[38] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[38] utilizationCountMissions 54
+scalar OsgEarthNet.uav[38] utilizationCountManeuversMission 714
+scalar OsgEarthNet.uav[38] utilizationCountManeuversMaintenance 108
+scalar OsgEarthNet.uav[38] utilizationCountChargeState 54
+scalar OsgEarthNet.uav[38] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[38] utilizationCountIdleState 54
+scalar OsgEarthNet.uav[38] utilizationFail 0
+scalar OsgEarthNet.uav[38] simulationTime 259200
+scalar OsgEarthNet.uav[39] utilizationSecMission 4684.5383628357
+scalar OsgEarthNet.uav[39] utilizationSecMaintenance 5177.3011002342
+scalar OsgEarthNet.uav[39] utilizationSecCharge 35750
+scalar OsgEarthNet.uav[39] utilizationSecIdle 213588.15953693
+scalar OsgEarthNet.uav[39] utilizationEnergyMission 21784.583179474
+scalar OsgEarthNet.uav[39] utilizationEnergyMaintenance 23653.58650589
+scalar OsgEarthNet.uav[39] utilizationEnergyCharge 46518.225097656
+scalar OsgEarthNet.uav[39] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[39] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[39] utilizationCountMissions 11
+scalar OsgEarthNet.uav[39] utilizationCountManeuversMission 130
+scalar OsgEarthNet.uav[39] utilizationCountManeuversMaintenance 22
+scalar OsgEarthNet.uav[39] utilizationCountChargeState 11
+scalar OsgEarthNet.uav[39] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[39] utilizationCountIdleState 12
+scalar OsgEarthNet.uav[39] utilizationFail 0
+scalar OsgEarthNet.uav[39] simulationTime 259200
+scalar OsgEarthNet.uav[40] utilizationSecMission 24586.104944088
+scalar OsgEarthNet.uav[40] utilizationSecMaintenance 26439.367657297
+scalar OsgEarthNet.uav[40] utilizationSecCharge 185302.52339861
+scalar OsgEarthNet.uav[40] utilizationSecIdle 22872.003
+scalar OsgEarthNet.uav[40] utilizationEnergyMission 121809.60425186
+scalar OsgEarthNet.uav[40] utilizationEnergyMaintenance 123933.60796738
+scalar OsgEarthNet.uav[40] utilizationEnergyCharge 240995.66601562
+scalar OsgEarthNet.uav[40] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[40] utilizationEnergyOverdrawMaintenance 87.408180236816
+scalar OsgEarthNet.uav[40] utilizationCountMissions 58
+scalar OsgEarthNet.uav[40] utilizationCountManeuversMission 833
+scalar OsgEarthNet.uav[40] utilizationCountManeuversMaintenance 116
+scalar OsgEarthNet.uav[40] utilizationCountChargeState 58
+scalar OsgEarthNet.uav[40] utilizationCountOverdrawnAfterMission 1
+scalar OsgEarthNet.uav[40] utilizationCountIdleState 58
+scalar OsgEarthNet.uav[40] utilizationFail 0
+scalar OsgEarthNet.uav[40] simulationTime 259200
+scalar OsgEarthNet.uav[41] utilizationSecMission 24125.370136319
+scalar OsgEarthNet.uav[41] utilizationSecMaintenance 25585.247401158
+scalar OsgEarthNet.uav[41] utilizationSecCharge 181592.9201193
+scalar OsgEarthNet.uav[41] utilizationSecIdle 27896.461343226
+scalar OsgEarthNet.uav[41] utilizationEnergyMission 119660.02464294
+scalar OsgEarthNet.uav[41] utilizationEnergyMaintenance 120253.97891998
+scalar OsgEarthNet.uav[41] utilizationEnergyCharge 236098.70251465
+scalar OsgEarthNet.uav[41] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[41] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[41] utilizationCountMissions 57
+scalar OsgEarthNet.uav[41] utilizationCountManeuversMission 803
+scalar OsgEarthNet.uav[41] utilizationCountManeuversMaintenance 114
+scalar OsgEarthNet.uav[41] utilizationCountChargeState 57
+scalar OsgEarthNet.uav[41] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[41] utilizationCountIdleState 57
+scalar OsgEarthNet.uav[41] utilizationFail 0
+scalar OsgEarthNet.uav[41] simulationTime 259200
+scalar OsgEarthNet.uav[42] utilizationSecMission 22803.064617482
+scalar OsgEarthNet.uav[42] utilizationSecMaintenance 22177.097568478
+scalar OsgEarthNet.uav[42] utilizationSecCharge 162650
+scalar OsgEarthNet.uav[42] utilizationSecIdle 51569.83681404
+scalar OsgEarthNet.uav[42] utilizationEnergyMission 109713.27408981
+scalar OsgEarthNet.uav[42] utilizationEnergyMaintenance 103133.18382973
+scalar OsgEarthNet.uav[42] utilizationEnergyCharge 212644.27929688
+scalar OsgEarthNet.uav[42] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[42] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[42] utilizationCountMissions 50
+scalar OsgEarthNet.uav[42] utilizationCountManeuversMission 705
+scalar OsgEarthNet.uav[42] utilizationCountManeuversMaintenance 101
+scalar OsgEarthNet.uav[42] utilizationCountChargeState 50
+scalar OsgEarthNet.uav[42] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[42] utilizationCountIdleState 51
+scalar OsgEarthNet.uav[42] utilizationFail 0
+scalar OsgEarthNet.uav[42] simulationTime 259200
+scalar OsgEarthNet.uav[43] utilizationSecMission 16466.036246593
+scalar OsgEarthNet.uav[43] utilizationSecMaintenance 16690.173733639
+scalar OsgEarthNet.uav[43] utilizationSecCharge 119561.78901977
+scalar OsgEarthNet.uav[43] utilizationSecIdle 106482
+scalar OsgEarthNet.uav[43] utilizationEnergyMission 78880.598377228
+scalar OsgEarthNet.uav[43] utilizationEnergyMaintenance 77915.621250153
+scalar OsgEarthNet.uav[43] utilizationEnergyCharge 156207.29638672
+scalar OsgEarthNet.uav[43] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[43] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[43] utilizationCountMissions 37
+scalar OsgEarthNet.uav[43] utilizationCountManeuversMission 435
+scalar OsgEarthNet.uav[43] utilizationCountManeuversMaintenance 73
+scalar OsgEarthNet.uav[43] utilizationCountChargeState 37
+scalar OsgEarthNet.uav[43] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[43] utilizationCountIdleState 36
+scalar OsgEarthNet.uav[43] utilizationFail 0
+scalar OsgEarthNet.uav[43] simulationTime 259200
+scalar OsgEarthNet.uav[44] utilizationSecMission 25846.407272504
+scalar OsgEarthNet.uav[44] utilizationSecMaintenance 24686.095581709
+scalar OsgEarthNet.uav[44] utilizationSecCharge 179642.79142386
+scalar OsgEarthNet.uav[44] utilizationSecIdle 29024.704721929
+scalar OsgEarthNet.uav[44] utilizationEnergyMission 123368.04867172
+scalar OsgEarthNet.uav[44] utilizationEnergyMaintenance 114161.27471542
+scalar OsgEarthNet.uav[44] utilizationEnergyCharge 236371.53173828
+scalar OsgEarthNet.uav[44] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[44] utilizationEnergyOverdrawMaintenance 13.958789825439
+scalar OsgEarthNet.uav[44] utilizationCountMissions 55
+scalar OsgEarthNet.uav[44] utilizationCountManeuversMission 699
+scalar OsgEarthNet.uav[44] utilizationCountManeuversMaintenance 110
+scalar OsgEarthNet.uav[44] utilizationCountChargeState 55
+scalar OsgEarthNet.uav[44] utilizationCountOverdrawnAfterMission 1
+scalar OsgEarthNet.uav[44] utilizationCountIdleState 55
+scalar OsgEarthNet.uav[44] utilizationFail 0
+scalar OsgEarthNet.uav[44] simulationTime 259200
+scalar OsgEarthNet.uav[45] utilizationSecMission 23831.726140908
+scalar OsgEarthNet.uav[45] utilizationSecMaintenance 26070.408619683
+scalar OsgEarthNet.uav[45] utilizationSecCharge 181528.689129
+scalar OsgEarthNet.uav[45] utilizationSecIdle 27769.175110411
+scalar OsgEarthNet.uav[45] utilizationEnergyMission 115829.6684761
+scalar OsgEarthNet.uav[45] utilizationEnergyMaintenance 121373.00159073
+scalar OsgEarthNet.uav[45] utilizationEnergyCharge 236831.9987793
+scalar OsgEarthNet.uav[45] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[45] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[45] utilizationCountMissions 56
+scalar OsgEarthNet.uav[45] utilizationCountManeuversMission 745
+scalar OsgEarthNet.uav[45] utilizationCountManeuversMaintenance 112
+scalar OsgEarthNet.uav[45] utilizationCountChargeState 56
+scalar OsgEarthNet.uav[45] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[45] utilizationCountIdleState 56
+scalar OsgEarthNet.uav[45] utilizationFail 0
+scalar OsgEarthNet.uav[45] simulationTime 259200
+scalar OsgEarthNet.uav[46] utilizationSecMission 25426.944110454
+scalar OsgEarthNet.uav[46] utilizationSecMaintenance 25016.593070215
+scalar OsgEarthNet.uav[46] utilizationSecCharge 182654.45781933
+scalar OsgEarthNet.uav[46] utilizationSecIdle 26102.004
+scalar OsgEarthNet.uav[46] utilizationEnergyMission 123903.71198654
+scalar OsgEarthNet.uav[46] utilizationEnergyMaintenance 117369.29269791
+scalar OsgEarthNet.uav[46] utilizationEnergyCharge 239750.19824219
+scalar OsgEarthNet.uav[46] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[46] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[46] utilizationCountMissions 56
+scalar OsgEarthNet.uav[46] utilizationCountManeuversMission 733
+scalar OsgEarthNet.uav[46] utilizationCountManeuversMaintenance 112
+scalar OsgEarthNet.uav[46] utilizationCountChargeState 56
+scalar OsgEarthNet.uav[46] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[46] utilizationCountIdleState 56
+scalar OsgEarthNet.uav[46] utilizationFail 0
+scalar OsgEarthNet.uav[46] simulationTime 259200
+scalar OsgEarthNet.uav[47] utilizationSecMission 24201.908023656
+scalar OsgEarthNet.uav[47] utilizationSecMaintenance 25640.683918032
+scalar OsgEarthNet.uav[47] utilizationSecCharge 181325.40105831
+scalar OsgEarthNet.uav[47] utilizationSecIdle 28032.006
+scalar OsgEarthNet.uav[47] utilizationEnergyMission 116855.19603729
+scalar OsgEarthNet.uav[47] utilizationEnergyMaintenance 119206.71672821
+scalar OsgEarthNet.uav[47] utilizationEnergyCharge 235997.43774414
+scalar OsgEarthNet.uav[47] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[47] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[47] utilizationCountMissions 56
+scalar OsgEarthNet.uav[47] utilizationCountManeuversMission 747
+scalar OsgEarthNet.uav[47] utilizationCountManeuversMaintenance 112
+scalar OsgEarthNet.uav[47] utilizationCountChargeState 56
+scalar OsgEarthNet.uav[47] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[47] utilizationCountIdleState 56
+scalar OsgEarthNet.uav[47] utilizationFail 0
+scalar OsgEarthNet.uav[47] simulationTime 259200
+scalar OsgEarthNet.uav[48] utilizationSecMission 5400.8288665312
+scalar OsgEarthNet.uav[48] utilizationSecMaintenance 4514.3161333198
+scalar OsgEarthNet.uav[48] utilizationSecCharge 35510
+scalar OsgEarthNet.uav[48] utilizationSecIdle 213774.85400015
+scalar OsgEarthNet.uav[48] utilizationEnergyMission 25871.745246887
+scalar OsgEarthNet.uav[48] utilizationEnergyMaintenance 20339.608287811
+scalar OsgEarthNet.uav[48] utilizationEnergyCharge 46144.882324219
+scalar OsgEarthNet.uav[48] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[48] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[48] utilizationCountMissions 11
+scalar OsgEarthNet.uav[48] utilizationCountManeuversMission 154
+scalar OsgEarthNet.uav[48] utilizationCountManeuversMaintenance 22
+scalar OsgEarthNet.uav[48] utilizationCountChargeState 11
+scalar OsgEarthNet.uav[48] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[48] utilizationCountIdleState 11
+scalar OsgEarthNet.uav[48] utilizationFail 0
+scalar OsgEarthNet.uav[48] simulationTime 259200
+scalar OsgEarthNet.uav[49] utilizationSecMission 18397.489828448
+scalar OsgEarthNet.uav[49] utilizationSecMaintenance 20060.495171552
+scalar OsgEarthNet.uav[49] utilizationSecCharge 139920
+scalar OsgEarthNet.uav[49] utilizationSecIdle 80822.014
+scalar OsgEarthNet.uav[49] utilizationEnergyMission 87944.480270386
+scalar OsgEarthNet.uav[49] utilizationEnergyMaintenance 93158.591293914
+scalar OsgEarthNet.uav[49] utilizationEnergyCharge 182794.81884766
+scalar OsgEarthNet.uav[49] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[49] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[49] utilizationCountMissions 43
+scalar OsgEarthNet.uav[49] utilizationCountManeuversMission 585
+scalar OsgEarthNet.uav[49] utilizationCountManeuversMaintenance 87
+scalar OsgEarthNet.uav[49] utilizationCountChargeState 43
+scalar OsgEarthNet.uav[49] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[49] utilizationCountIdleState 43
+scalar OsgEarthNet.uav[49] utilizationFail 0
+scalar OsgEarthNet.uav[49] simulationTime 259200
+scalar OsgEarthNet.uav[50] utilizationSecMission 25664.020944626
+scalar OsgEarthNet.uav[50] utilizationSecMaintenance 22423.969055374
+scalar OsgEarthNet.uav[50] utilizationSecCharge 174680
+scalar OsgEarthNet.uav[50] utilizationSecIdle 36432.009
+scalar OsgEarthNet.uav[50] utilizationEnergyMission 124145.1299396
+scalar OsgEarthNet.uav[50] utilizationEnergyMaintenance 104586.84023285
+scalar OsgEarthNet.uav[50] utilizationEnergyCharge 227109.83642578
+scalar OsgEarthNet.uav[50] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[50] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[50] utilizationCountMissions 54
+scalar OsgEarthNet.uav[50] utilizationCountManeuversMission 880
+scalar OsgEarthNet.uav[50] utilizationCountManeuversMaintenance 109
+scalar OsgEarthNet.uav[50] utilizationCountChargeState 54
+scalar OsgEarthNet.uav[50] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[50] utilizationCountIdleState 55
+scalar OsgEarthNet.uav[50] utilizationFail 0
+scalar OsgEarthNet.uav[50] simulationTime 259200
+scalar OsgEarthNet.uav[51] utilizationSecMission 22306.512043849
+scalar OsgEarthNet.uav[51] utilizationSecMaintenance 23149.819706263
+scalar OsgEarthNet.uav[51] utilizationSecCharge 164606.93397656
+scalar OsgEarthNet.uav[51] utilizationSecIdle 49136.733273333
+scalar OsgEarthNet.uav[51] utilizationEnergyMission 107294.35787201
+scalar OsgEarthNet.uav[51] utilizationEnergyMaintenance 108863.81801987
+scalar OsgEarthNet.uav[51] utilizationEnergyCharge 215617.74316406
+scalar OsgEarthNet.uav[51] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[51] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[51] utilizationCountMissions 51
+scalar OsgEarthNet.uav[51] utilizationCountManeuversMission 675
+scalar OsgEarthNet.uav[51] utilizationCountManeuversMaintenance 102
+scalar OsgEarthNet.uav[51] utilizationCountChargeState 51
+scalar OsgEarthNet.uav[51] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[51] utilizationCountIdleState 50
+scalar OsgEarthNet.uav[51] utilizationFail 0
+scalar OsgEarthNet.uav[51] simulationTime 259200
+scalar OsgEarthNet.uav[52] utilizationSecMission 28766.567707859
+scalar OsgEarthNet.uav[52] utilizationSecMaintenance 22543.173770875
+scalar OsgEarthNet.uav[52] utilizationSecCharge 185128.25652127
+scalar OsgEarthNet.uav[52] utilizationSecIdle 22762.001
+scalar OsgEarthNet.uav[52] utilizationEnergyMission 137163.99339294
+scalar OsgEarthNet.uav[52] utilizationEnergyMaintenance 105129.47005844
+scalar OsgEarthNet.uav[52] utilizationEnergyCharge 241973.17700195
+scalar OsgEarthNet.uav[52] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[52] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[52] utilizationCountMissions 57
+scalar OsgEarthNet.uav[52] utilizationCountManeuversMission 779
+scalar OsgEarthNet.uav[52] utilizationCountManeuversMaintenance 114
+scalar OsgEarthNet.uav[52] utilizationCountChargeState 57
+scalar OsgEarthNet.uav[52] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[52] utilizationCountIdleState 56
+scalar OsgEarthNet.uav[52] utilizationFail 0
+scalar OsgEarthNet.uav[52] simulationTime 259200
+scalar OsgEarthNet.uav[53] utilizationSecMission 24745.883048815
+scalar OsgEarthNet.uav[53] utilizationSecMaintenance 25820.762720507
+scalar OsgEarthNet.uav[53] utilizationSecCharge 183129.35829726
+scalar OsgEarthNet.uav[53] utilizationSecIdle 25503.994933421
+scalar OsgEarthNet.uav[53] utilizationEnergyMission 121228.99324036
+scalar OsgEarthNet.uav[53] utilizationEnergyMaintenance 120045.13164139
+scalar OsgEarthNet.uav[53] utilizationEnergyCharge 239262.20092773
+scalar OsgEarthNet.uav[53] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[53] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[53] utilizationCountMissions 57
+scalar OsgEarthNet.uav[53] utilizationCountManeuversMission 841
+scalar OsgEarthNet.uav[53] utilizationCountManeuversMaintenance 114
+scalar OsgEarthNet.uav[53] utilizationCountChargeState 57
+scalar OsgEarthNet.uav[53] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[53] utilizationCountIdleState 56
+scalar OsgEarthNet.uav[53] utilizationFail 0
+scalar OsgEarthNet.uav[53] simulationTime 259200
+scalar OsgEarthNet.uav[54] utilizationSecMission 15962.586834015
+scalar OsgEarthNet.uav[54] utilizationSecMaintenance 17248.205072194
+scalar OsgEarthNet.uav[54] utilizationSecCharge 118450
+scalar OsgEarthNet.uav[54] utilizationSecIdle 107539.20709379
+scalar OsgEarthNet.uav[54] utilizationEnergyMission 75366.301113129
+scalar OsgEarthNet.uav[54] utilizationEnergyMaintenance 79751.068218231
+scalar OsgEarthNet.uav[54] utilizationEnergyCharge 154890.21508789
+scalar OsgEarthNet.uav[54] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[54] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[54] utilizationCountMissions 36
+scalar OsgEarthNet.uav[54] utilizationCountManeuversMission 412
+scalar OsgEarthNet.uav[54] utilizationCountManeuversMaintenance 72
+scalar OsgEarthNet.uav[54] utilizationCountChargeState 36
+scalar OsgEarthNet.uav[54] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[54] utilizationCountIdleState 35
+scalar OsgEarthNet.uav[54] utilizationFail 0
+scalar OsgEarthNet.uav[54] simulationTime 259200
+scalar OsgEarthNet.uav[55] utilizationSecMission 13986.210662947
+scalar OsgEarthNet.uav[55] utilizationSecMaintenance 14401.775305045
+scalar OsgEarthNet.uav[55] utilizationSecCharge 103380
+scalar OsgEarthNet.uav[55] utilizationSecIdle 127432.01303201
+scalar OsgEarthNet.uav[55] utilizationEnergyMission 67957.177909851
+scalar OsgEarthNet.uav[55] utilizationEnergyMaintenance 66596.208297729
+scalar OsgEarthNet.uav[55] utilizationEnergyCharge 134737.5871582
+scalar OsgEarthNet.uav[55] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[55] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[55] utilizationCountMissions 32
+scalar OsgEarthNet.uav[55] utilizationCountManeuversMission 380
+scalar OsgEarthNet.uav[55] utilizationCountManeuversMaintenance 64
+scalar OsgEarthNet.uav[55] utilizationCountChargeState 32
+scalar OsgEarthNet.uav[55] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[55] utilizationCountIdleState 31
+scalar OsgEarthNet.uav[55] utilizationFail 0
+scalar OsgEarthNet.uav[55] simulationTime 259200
+scalar OsgEarthNet.uav[56] utilizationSecMission 17691.34044641
+scalar OsgEarthNet.uav[56] utilizationSecMaintenance 16057.799051122
+scalar OsgEarthNet.uav[56] utilizationSecCharge 121277.46636976
+scalar OsgEarthNet.uav[56] utilizationSecIdle 104173.39313271
+scalar OsgEarthNet.uav[56] utilizationEnergyMission 85398.056762695
+scalar OsgEarthNet.uav[56] utilizationEnergyMaintenance 75270.943740845
+scalar OsgEarthNet.uav[56] utilizationEnergyCharge 157236.66772461
+scalar OsgEarthNet.uav[56] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[56] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[56] utilizationCountMissions 39
+scalar OsgEarthNet.uav[56] utilizationCountManeuversMission 592
+scalar OsgEarthNet.uav[56] utilizationCountManeuversMaintenance 78
+scalar OsgEarthNet.uav[56] utilizationCountChargeState 39
+scalar OsgEarthNet.uav[56] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[56] utilizationCountIdleState 36
+scalar OsgEarthNet.uav[56] utilizationFail 0
+scalar OsgEarthNet.uav[56] simulationTime 259200
+scalar OsgEarthNet.uav[57] utilizationSecMission 17038.79561348
+scalar OsgEarthNet.uav[57] utilizationSecMaintenance 20370.725944766
+scalar OsgEarthNet.uav[57] utilizationSecCharge 135970
+scalar OsgEarthNet.uav[57] utilizationSecIdle 85820.477441755
+scalar OsgEarthNet.uav[57] utilizationEnergyMission 83086.445201874
+scalar OsgEarthNet.uav[57] utilizationEnergyMaintenance 95094.231674194
+scalar OsgEarthNet.uav[57] utilizationEnergyCharge 177147.80883789
+scalar OsgEarthNet.uav[57] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[57] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[57] utilizationCountMissions 42
+scalar OsgEarthNet.uav[57] utilizationCountManeuversMission 533
+scalar OsgEarthNet.uav[57] utilizationCountManeuversMaintenance 84
+scalar OsgEarthNet.uav[57] utilizationCountChargeState 42
+scalar OsgEarthNet.uav[57] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[57] utilizationCountIdleState 42
+scalar OsgEarthNet.uav[57] utilizationFail 0
+scalar OsgEarthNet.uav[57] simulationTime 259200
+scalar OsgEarthNet.uav[58] utilizationSecMission 23893.098003153
+scalar OsgEarthNet.uav[58] utilizationSecMaintenance 24487.474540965
+scalar OsgEarthNet.uav[58] utilizationSecCharge 174739.79537522
+scalar OsgEarthNet.uav[58] utilizationSecIdle 36079.631080665
+scalar OsgEarthNet.uav[58] utilizationEnergyMission 115862.86315918
+scalar OsgEarthNet.uav[58] utilizationEnergyMaintenance 113578.34393311
+scalar OsgEarthNet.uav[58] utilizationEnergyCharge 229174.82763672
+scalar OsgEarthNet.uav[58] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[58] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[58] utilizationCountMissions 54
+scalar OsgEarthNet.uav[58] utilizationCountManeuversMission 754
+scalar OsgEarthNet.uav[58] utilizationCountManeuversMaintenance 108
+scalar OsgEarthNet.uav[58] utilizationCountChargeState 54
+scalar OsgEarthNet.uav[58] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[58] utilizationCountIdleState 52
+scalar OsgEarthNet.uav[58] utilizationFail 0
+scalar OsgEarthNet.uav[58] simulationTime 259200
+scalar OsgEarthNet.uav[59] utilizationSecMission 21975.670775156
+scalar OsgEarthNet.uav[59] utilizationSecMaintenance 17611.275223729
+scalar OsgEarthNet.uav[59] utilizationSecCharge 142521.05300111
+scalar OsgEarthNet.uav[59] utilizationSecIdle 77092
+scalar OsgEarthNet.uav[59] utilizationEnergyMission 104721.23685837
+scalar OsgEarthNet.uav[59] utilizationEnergyMaintenance 82323.495494843
+scalar OsgEarthNet.uav[59] utilizationEnergyCharge 187183.93261719
+scalar OsgEarthNet.uav[59] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[59] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[59] utilizationCountMissions 44
+scalar OsgEarthNet.uav[59] utilizationCountManeuversMission 617
+scalar OsgEarthNet.uav[59] utilizationCountManeuversMaintenance 87
+scalar OsgEarthNet.uav[59] utilizationCountChargeState 44
+scalar OsgEarthNet.uav[59] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[59] utilizationCountIdleState 42
+scalar OsgEarthNet.uav[59] utilizationFail 0
+scalar OsgEarthNet.uav[59] simulationTime 259200
+scalar OsgEarthNet.uav[60] utilizationSecMission 17607.419255517
+scalar OsgEarthNet.uav[60] utilizationSecMaintenance 16767.069646014
+scalar OsgEarthNet.uav[60] utilizationSecCharge 123820
+scalar OsgEarthNet.uav[60] utilizationSecIdle 101005.51009847
+scalar OsgEarthNet.uav[60] utilizationEnergyMission 85319.674507141
+scalar OsgEarthNet.uav[60] utilizationEnergyMaintenance 77864.782970428
+scalar OsgEarthNet.uav[60] utilizationEnergyCharge 162909.19848633
+scalar OsgEarthNet.uav[60] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[60] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[60] utilizationCountMissions 38
+scalar OsgEarthNet.uav[60] utilizationCountManeuversMission 465
+scalar OsgEarthNet.uav[60] utilizationCountManeuversMaintenance 76
+scalar OsgEarthNet.uav[60] utilizationCountChargeState 38
+scalar OsgEarthNet.uav[60] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[60] utilizationCountIdleState 35
+scalar OsgEarthNet.uav[60] utilizationFail 0
+scalar OsgEarthNet.uav[60] simulationTime 259200
+scalar OsgEarthNet.uav[61] utilizationSecMission 18405.063084609
+scalar OsgEarthNet.uav[61] utilizationSecMaintenance 22211.506812971
+scalar OsgEarthNet.uav[61] utilizationSecCharge 145830
+scalar OsgEarthNet.uav[61] utilizationSecIdle 72753.42910242
+scalar OsgEarthNet.uav[61] utilizationEnergyMission 89513.323040009
+scalar OsgEarthNet.uav[61] utilizationEnergyMaintenance 102867.90523148
+scalar OsgEarthNet.uav[61] utilizationEnergyCharge 191769.09448242
+scalar OsgEarthNet.uav[61] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[61] utilizationEnergyOverdrawMaintenance 54.396976470947
+scalar OsgEarthNet.uav[61] utilizationCountMissions 45
+scalar OsgEarthNet.uav[61] utilizationCountManeuversMission 537
+scalar OsgEarthNet.uav[61] utilizationCountManeuversMaintenance 90
+scalar OsgEarthNet.uav[61] utilizationCountChargeState 45
+scalar OsgEarthNet.uav[61] utilizationCountOverdrawnAfterMission 1
+scalar OsgEarthNet.uav[61] utilizationCountIdleState 37
+scalar OsgEarthNet.uav[61] utilizationFail 0
+scalar OsgEarthNet.uav[61] simulationTime 259200
+scalar OsgEarthNet.uav[62] utilizationSecMission 19299.427222624
+scalar OsgEarthNet.uav[62] utilizationSecMaintenance 22863.118827324
+scalar OsgEarthNet.uav[62] utilizationSecCharge 155670
+scalar OsgEarthNet.uav[62] utilizationSecIdle 61367.452950052
+scalar OsgEarthNet.uav[62] utilizationEnergyMission 93133.252803802
+scalar OsgEarthNet.uav[62] utilizationEnergyMaintenance 107778.68035126
+scalar OsgEarthNet.uav[62] utilizationEnergyCharge 203330.86669922
+scalar OsgEarthNet.uav[62] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[62] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[62] utilizationCountMissions 48
+scalar OsgEarthNet.uav[62] utilizationCountManeuversMission 587
+scalar OsgEarthNet.uav[62] utilizationCountManeuversMaintenance 96
+scalar OsgEarthNet.uav[62] utilizationCountChargeState 48
+scalar OsgEarthNet.uav[62] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[62] utilizationCountIdleState 45
+scalar OsgEarthNet.uav[62] utilizationFail 0
+scalar OsgEarthNet.uav[62] simulationTime 259200
+scalar OsgEarthNet.uav[63] utilizationSecMission 28123.005157341
+scalar OsgEarthNet.uav[63] utilizationSecMaintenance 22789.217272322
+scalar OsgEarthNet.uav[63] utilizationSecCharge 184055.77157034
+scalar OsgEarthNet.uav[63] utilizationSecIdle 24232.005
+scalar OsgEarthNet.uav[63] utilizationEnergyMission 134952.09596252
+scalar OsgEarthNet.uav[63] utilizationEnergyMaintenance 106269.41864777
+scalar OsgEarthNet.uav[63] utilizationEnergyCharge 241466.02954102
+scalar OsgEarthNet.uav[63] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[63] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[63] utilizationCountMissions 57
+scalar OsgEarthNet.uav[63] utilizationCountManeuversMission 822
+scalar OsgEarthNet.uav[63] utilizationCountManeuversMaintenance 114
+scalar OsgEarthNet.uav[63] utilizationCountChargeState 57
+scalar OsgEarthNet.uav[63] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[63] utilizationCountIdleState 54
+scalar OsgEarthNet.uav[63] utilizationFail 0
+scalar OsgEarthNet.uav[63] simulationTime 259200
+scalar OsgEarthNet.uav[64] utilizationSecMission 21189.843465083
+scalar OsgEarthNet.uav[64] utilizationSecMaintenance 23278.024720619
+scalar OsgEarthNet.uav[64] utilizationSecCharge 159220
+scalar OsgEarthNet.uav[64] utilizationSecIdle 55512.130814298
+scalar OsgEarthNet.uav[64] utilizationEnergyMission 102957.36573029
+scalar OsgEarthNet.uav[64] utilizationEnergyMaintenance 107822.07666779
+scalar OsgEarthNet.uav[64] utilizationEnergyCharge 210796.93041992
+scalar OsgEarthNet.uav[64] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[64] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[64] utilizationCountMissions 49
+scalar OsgEarthNet.uav[64] utilizationCountManeuversMission 640
+scalar OsgEarthNet.uav[64] utilizationCountManeuversMaintenance 98
+scalar OsgEarthNet.uav[64] utilizationCountChargeState 49
+scalar OsgEarthNet.uav[64] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[64] utilizationCountIdleState 41
+scalar OsgEarthNet.uav[64] utilizationFail 0
+scalar OsgEarthNet.uav[64] simulationTime 259200
+scalar OsgEarthNet.uav[65] utilizationSecMission 24066.976039612
+scalar OsgEarthNet.uav[65] utilizationSecMaintenance 25600.893992068
+scalar OsgEarthNet.uav[65] utilizationSecCharge 180720
+scalar OsgEarthNet.uav[65] utilizationSecIdle 28812.12896832
+scalar OsgEarthNet.uav[65] utilizationEnergyMission 117017.99239731
+scalar OsgEarthNet.uav[65] utilizationEnergyMaintenance 119887.50396729
+scalar OsgEarthNet.uav[65] utilizationEnergyCharge 236135.44970703
+scalar OsgEarthNet.uav[65] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[65] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[65] utilizationCountMissions 56
+scalar OsgEarthNet.uav[65] utilizationCountManeuversMission 770
+scalar OsgEarthNet.uav[65] utilizationCountManeuversMaintenance 112
+scalar OsgEarthNet.uav[65] utilizationCountChargeState 56
+scalar OsgEarthNet.uav[65] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[65] utilizationCountIdleState 52
+scalar OsgEarthNet.uav[65] utilizationFail 0
+scalar OsgEarthNet.uav[65] simulationTime 259200
+scalar OsgEarthNet.uav[66] utilizationSecMission 21808.729647615
+scalar OsgEarthNet.uav[66] utilizationSecMaintenance 24139.384578168
+scalar OsgEarthNet.uav[66] utilizationSecCharge 163800
+scalar OsgEarthNet.uav[66] utilizationSecIdle 49451.884774217
+scalar OsgEarthNet.uav[66] utilizationEnergyMission 106818.21411133
+scalar OsgEarthNet.uav[66] utilizationEnergyMaintenance 112577.94110182
+scalar OsgEarthNet.uav[66] utilizationEnergyCharge 217957.69482422
+scalar OsgEarthNet.uav[66] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[66] utilizationEnergyOverdrawMaintenance 478.63562011719
+scalar OsgEarthNet.uav[66] utilizationCountMissions 50
+scalar OsgEarthNet.uav[66] utilizationCountManeuversMission 599
+scalar OsgEarthNet.uav[66] utilizationCountManeuversMaintenance 101
+scalar OsgEarthNet.uav[66] utilizationCountChargeState 50
+scalar OsgEarthNet.uav[66] utilizationCountOverdrawnAfterMission 2
+scalar OsgEarthNet.uav[66] utilizationCountIdleState 39
+scalar OsgEarthNet.uav[66] utilizationFail 0
+scalar OsgEarthNet.uav[66] simulationTime 259200
+scalar OsgEarthNet.uav[67] utilizationSecMission 22123.32965409
+scalar OsgEarthNet.uav[67] utilizationSecMaintenance 25300.336558396
+scalar OsgEarthNet.uav[67] utilizationSecCharge 171030
+scalar OsgEarthNet.uav[67] utilizationSecIdle 40746.332787514
+scalar OsgEarthNet.uav[67] utilizationEnergyMission 107592.0831034
+scalar OsgEarthNet.uav[67] utilizationEnergyMaintenance 118211.0422287
+scalar OsgEarthNet.uav[67] utilizationEnergyCharge 224956.38720703
+scalar OsgEarthNet.uav[67] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[67] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[67] utilizationCountMissions 53
+scalar OsgEarthNet.uav[67] utilizationCountManeuversMission 749
+scalar OsgEarthNet.uav[67] utilizationCountManeuversMaintenance 107
+scalar OsgEarthNet.uav[67] utilizationCountChargeState 53
+scalar OsgEarthNet.uav[67] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[67] utilizationCountIdleState 48
+scalar OsgEarthNet.uav[67] utilizationFail 0
+scalar OsgEarthNet.uav[67] simulationTime 259200
+scalar OsgEarthNet.uav[68] utilizationSecMission 23066.825842938
+scalar OsgEarthNet.uav[68] utilizationSecMaintenance 25261.171157062
+scalar OsgEarthNet.uav[68] utilizationSecCharge 173620
+scalar OsgEarthNet.uav[68] utilizationSecIdle 37252.002
+scalar OsgEarthNet.uav[68] utilizationEnergyMission 115045.66714683
+scalar OsgEarthNet.uav[68] utilizationEnergyMaintenance 117227.15107727
+scalar OsgEarthNet.uav[68] utilizationEnergyCharge 229874.74267578
+scalar OsgEarthNet.uav[68] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[68] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[68] utilizationCountMissions 55
+scalar OsgEarthNet.uav[68] utilizationCountManeuversMission 801
+scalar OsgEarthNet.uav[68] utilizationCountManeuversMaintenance 111
+scalar OsgEarthNet.uav[68] utilizationCountChargeState 55
+scalar OsgEarthNet.uav[68] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[68] utilizationCountIdleState 39
+scalar OsgEarthNet.uav[68] utilizationFail 0
+scalar OsgEarthNet.uav[68] simulationTime 259200
+scalar OsgEarthNet.uav[69] utilizationSecMission 24539.524621412
+scalar OsgEarthNet.uav[69] utilizationSecMaintenance 27454.452767389
+scalar OsgEarthNet.uav[69] utilizationSecCharge 184580
+scalar OsgEarthNet.uav[69] utilizationSecIdle 22626.021611199
+scalar OsgEarthNet.uav[69] utilizationEnergyMission 118160.09784976
+scalar OsgEarthNet.uav[69] utilizationEnergyMaintenance 128853.9115715
+scalar OsgEarthNet.uav[69] utilizationEnergyCharge 246926.66015625
+scalar OsgEarthNet.uav[69] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[69] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[69] utilizationCountMissions 57
+scalar OsgEarthNet.uav[69] utilizationCountManeuversMission 731
+scalar OsgEarthNet.uav[69] utilizationCountManeuversMaintenance 115
+scalar OsgEarthNet.uav[69] utilizationCountChargeState 57
+scalar OsgEarthNet.uav[69] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[69] utilizationCountIdleState 37
+scalar OsgEarthNet.uav[69] utilizationFail 0
+scalar OsgEarthNet.uav[69] simulationTime 259200
+scalar OsgEarthNet.uav[70] utilizationSecMission 25192.503976858
+scalar OsgEarthNet.uav[70] utilizationSecMaintenance 24912.592686928
+scalar OsgEarthNet.uav[70] utilizationSecCharge 176880
+scalar OsgEarthNet.uav[70] utilizationSecIdle 32214.902336213
+scalar OsgEarthNet.uav[70] utilizationEnergyMission 120953.83251591
+scalar OsgEarthNet.uav[70] utilizationEnergyMaintenance 114580.25385666
+scalar OsgEarthNet.uav[70] utilizationEnergyCharge 231947.57202148
+scalar OsgEarthNet.uav[70] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[70] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[70] utilizationCountMissions 55
+scalar OsgEarthNet.uav[70] utilizationCountManeuversMission 723
+scalar OsgEarthNet.uav[70] utilizationCountManeuversMaintenance 111
+scalar OsgEarthNet.uav[70] utilizationCountChargeState 55
+scalar OsgEarthNet.uav[70] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[70] utilizationCountIdleState 47
+scalar OsgEarthNet.uav[70] utilizationFail 0
+scalar OsgEarthNet.uav[70] simulationTime 259200
+scalar OsgEarthNet.uav[71] utilizationSecMission 25651.295345183
+scalar OsgEarthNet.uav[71] utilizationSecMaintenance 26199.290567751
+scalar OsgEarthNet.uav[71] utilizationSecCharge 184704.60471675
+scalar OsgEarthNet.uav[71] utilizationSecIdle 22644.808370316
+scalar OsgEarthNet.uav[71] utilizationEnergyMission 126592.97840881
+scalar OsgEarthNet.uav[71] utilizationEnergyMaintenance 121931.24154282
+scalar OsgEarthNet.uav[71] utilizationEnergyCharge 243614.07287598
+scalar OsgEarthNet.uav[71] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[71] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[71] utilizationCountMissions 59
+scalar OsgEarthNet.uav[71] utilizationCountManeuversMission 825
+scalar OsgEarthNet.uav[71] utilizationCountManeuversMaintenance 118
+scalar OsgEarthNet.uav[71] utilizationCountChargeState 59
+scalar OsgEarthNet.uav[71] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[71] utilizationCountIdleState 42
+scalar OsgEarthNet.uav[71] utilizationFail 0
+scalar OsgEarthNet.uav[71] simulationTime 259200
+scalar OsgEarthNet.uav[72] utilizationSecMission 25829.225287481
+scalar OsgEarthNet.uav[72] utilizationSecMaintenance 26258.767712519
+scalar OsgEarthNet.uav[72] utilizationSecCharge 184660
+scalar OsgEarthNet.uav[72] utilizationSecIdle 22452.006
+scalar OsgEarthNet.uav[72] utilizationEnergyMission 126286.28186798
+scalar OsgEarthNet.uav[72] utilizationEnergyMaintenance 121894.1268712
+scalar OsgEarthNet.uav[72] utilizationEnergyCharge 243532.89355469
+scalar OsgEarthNet.uav[72] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[72] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[72] utilizationCountMissions 59
+scalar OsgEarthNet.uav[72] utilizationCountManeuversMission 852
+scalar OsgEarthNet.uav[72] utilizationCountManeuversMaintenance 118
+scalar OsgEarthNet.uav[72] utilizationCountChargeState 58
+scalar OsgEarthNet.uav[72] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[72] utilizationCountIdleState 39
+scalar OsgEarthNet.uav[72] utilizationFail 0
+scalar OsgEarthNet.uav[72] simulationTime 259200
+scalar OsgEarthNet.uav[73] utilizationSecMission 21947.876377076
+scalar OsgEarthNet.uav[73] utilizationSecMaintenance 31831.134776492
+scalar OsgEarthNet.uav[73] utilizationSecCharge 189858.98784643
+scalar OsgEarthNet.uav[73] utilizationSecIdle 15562
+scalar OsgEarthNet.uav[73] utilizationEnergyMission 108138.05497742
+scalar OsgEarthNet.uav[73] utilizationEnergyMaintenance 150127.83281708
+scalar OsgEarthNet.uav[73] utilizationEnergyCharge 254148.46191406
+scalar OsgEarthNet.uav[73] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[73] utilizationEnergyOverdrawMaintenance 526.32064819336
+scalar OsgEarthNet.uav[73] utilizationCountMissions 60
+scalar OsgEarthNet.uav[73] utilizationCountManeuversMission 745
+scalar OsgEarthNet.uav[73] utilizationCountManeuversMaintenance 120
+scalar OsgEarthNet.uav[73] utilizationCountChargeState 60
+scalar OsgEarthNet.uav[73] utilizationCountOverdrawnAfterMission 3
+scalar OsgEarthNet.uav[73] utilizationCountIdleState 33
+scalar OsgEarthNet.uav[73] utilizationFail 0
+scalar OsgEarthNet.uav[73] simulationTime 259200
+scalar OsgEarthNet.uav[74] utilizationSecMission 23539.664958021
+scalar OsgEarthNet.uav[74] utilizationSecMaintenance 28752.739044354
+scalar OsgEarthNet.uav[74] utilizationSecCharge 185678.03898999
+scalar OsgEarthNet.uav[74] utilizationSecIdle 21229.55600764
+scalar OsgEarthNet.uav[74] utilizationEnergyMission 115163.86488342
+scalar OsgEarthNet.uav[74] utilizationEnergyMaintenance 134093.94601822
+scalar OsgEarthNet.uav[74] utilizationEnergyCharge 245888.48620605
+scalar OsgEarthNet.uav[74] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[74] utilizationEnergyOverdrawMaintenance 241.07124328613
+scalar OsgEarthNet.uav[74] utilizationCountMissions 60
+scalar OsgEarthNet.uav[74] utilizationCountManeuversMission 870
+scalar OsgEarthNet.uav[74] utilizationCountManeuversMaintenance 120
+scalar OsgEarthNet.uav[74] utilizationCountChargeState 60
+scalar OsgEarthNet.uav[74] utilizationCountOverdrawnAfterMission 1
+scalar OsgEarthNet.uav[74] utilizationCountIdleState 36
+scalar OsgEarthNet.uav[74] utilizationFail 0
+scalar OsgEarthNet.uav[74] simulationTime 259200
+scalar OsgEarthNet.uav[75] utilizationSecMission 26530.989949004
+scalar OsgEarthNet.uav[75] utilizationSecMaintenance 27789.776601461
+scalar OsgEarthNet.uav[75] utilizationSecCharge 190980.38428974
+scalar OsgEarthNet.uav[75] utilizationSecIdle 13898.848159794
+scalar OsgEarthNet.uav[75] utilizationEnergyMission 128631.20920944
+scalar OsgEarthNet.uav[75] utilizationEnergyMaintenance 128379.54131317
+scalar OsgEarthNet.uav[75] utilizationEnergyCharge 254094.19543457
+scalar OsgEarthNet.uav[75] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[75] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[75] utilizationCountMissions 60
+scalar OsgEarthNet.uav[75] utilizationCountManeuversMission 749
+scalar OsgEarthNet.uav[75] utilizationCountManeuversMaintenance 120
+scalar OsgEarthNet.uav[75] utilizationCountChargeState 60
+scalar OsgEarthNet.uav[75] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[75] utilizationCountIdleState 35
+scalar OsgEarthNet.uav[75] utilizationFail 0
+scalar OsgEarthNet.uav[75] simulationTime 259200
+scalar OsgEarthNet.uav[76] utilizationSecMission 24936.029921297
+scalar OsgEarthNet.uav[76] utilizationSecMaintenance 28176.494707705
+scalar OsgEarthNet.uav[76] utilizationSecCharge 186425.79742642
+scalar OsgEarthNet.uav[76] utilizationSecIdle 19661.676944575
+scalar OsgEarthNet.uav[76] utilizationEnergyMission 122660.83399963
+scalar OsgEarthNet.uav[76] utilizationEnergyMaintenance 131488.67312241
+scalar OsgEarthNet.uav[76] utilizationEnergyCharge 250872.3984375
+scalar OsgEarthNet.uav[76] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[76] utilizationEnergyOverdrawMaintenance 104.74265289307
+scalar OsgEarthNet.uav[76] utilizationCountMissions 59
+scalar OsgEarthNet.uav[76] utilizationCountManeuversMission 823
+scalar OsgEarthNet.uav[76] utilizationCountManeuversMaintenance 118
+scalar OsgEarthNet.uav[76] utilizationCountChargeState 59
+scalar OsgEarthNet.uav[76] utilizationCountOverdrawnAfterMission 1
+scalar OsgEarthNet.uav[76] utilizationCountIdleState 30
+scalar OsgEarthNet.uav[76] utilizationFail 0
+scalar OsgEarthNet.uav[76] simulationTime 259200
+scalar OsgEarthNet.uav[77] utilizationSecMission 26634.072360918
+scalar OsgEarthNet.uav[77] utilizationSecMaintenance 27025.354776124
+scalar OsgEarthNet.uav[77] utilizationSecCharge 187300.23637373
+scalar OsgEarthNet.uav[77] utilizationSecIdle 18240.335489224
+scalar OsgEarthNet.uav[77] utilizationEnergyMission 127165.94059372
+scalar OsgEarthNet.uav[77] utilizationEnergyMaintenance 126495.36107635
+scalar OsgEarthNet.uav[77] utilizationEnergyCharge 250169.49926758
+scalar OsgEarthNet.uav[77] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[77] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[77] utilizationCountMissions 60
+scalar OsgEarthNet.uav[77] utilizationCountManeuversMission 748
+scalar OsgEarthNet.uav[77] utilizationCountManeuversMaintenance 120
+scalar OsgEarthNet.uav[77] utilizationCountChargeState 60
+scalar OsgEarthNet.uav[77] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[77] utilizationCountIdleState 34
+scalar OsgEarthNet.uav[77] utilizationFail 0
+scalar OsgEarthNet.uav[77] simulationTime 259200
+scalar OsgEarthNet.uav[78] utilizationSecMission 24904.628382691
+scalar OsgEarthNet.uav[78] utilizationSecMaintenance 29718.154871223
+scalar OsgEarthNet.uav[78] utilizationSecCharge 190465.21274609
+scalar OsgEarthNet.uav[78] utilizationSecIdle 14112.003
+scalar OsgEarthNet.uav[78] utilizationEnergyMission 118619.13899612
+scalar OsgEarthNet.uav[78] utilizationEnergyMaintenance 138856.7583313
+scalar OsgEarthNet.uav[78] utilizationEnergyCharge 254821.43817139
+scalar OsgEarthNet.uav[78] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[78] utilizationEnergyOverdrawMaintenance 5.6541357040405
+scalar OsgEarthNet.uav[78] utilizationCountMissions 60
+scalar OsgEarthNet.uav[78] utilizationCountManeuversMission 732
+scalar OsgEarthNet.uav[78] utilizationCountManeuversMaintenance 120
+scalar OsgEarthNet.uav[78] utilizationCountChargeState 60
+scalar OsgEarthNet.uav[78] utilizationCountOverdrawnAfterMission 1
+scalar OsgEarthNet.uav[78] utilizationCountIdleState 36
+scalar OsgEarthNet.uav[78] utilizationFail 0
+scalar OsgEarthNet.uav[78] simulationTime 259200
+scalar OsgEarthNet.uav[79] utilizationSecMission 26574.484934675
+scalar OsgEarthNet.uav[79] utilizationSecMaintenance 27987.333798886
+scalar OsgEarthNet.uav[79] utilizationSecCharge 193856.17826644
+scalar OsgEarthNet.uav[79] utilizationSecIdle 10782.002
+scalar OsgEarthNet.uav[79] utilizationEnergyMission 130804.43012238
+scalar OsgEarthNet.uav[79] utilizationEnergyMaintenance 129449.2595787
+scalar OsgEarthNet.uav[79] utilizationEnergyCharge 258168.72900391
+scalar OsgEarthNet.uav[79] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[79] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[79] utilizationCountMissions 62
+scalar OsgEarthNet.uav[79] utilizationCountManeuversMission 904
+scalar OsgEarthNet.uav[79] utilizationCountManeuversMaintenance 124
+scalar OsgEarthNet.uav[79] utilizationCountChargeState 62
+scalar OsgEarthNet.uav[79] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[79] utilizationCountIdleState 35
+scalar OsgEarthNet.uav[79] utilizationFail 0
+scalar OsgEarthNet.uav[79] simulationTime 259200
+scalar OsgEarthNet.uav[80] utilizationSecMission 28011.378214309
+scalar OsgEarthNet.uav[80] utilizationSecMaintenance 25351.206468555
+scalar OsgEarthNet.uav[80] utilizationSecCharge 189445.96731138
+scalar OsgEarthNet.uav[80] utilizationSecIdle 16391.447005761
+scalar OsgEarthNet.uav[80] utilizationEnergyMission 137421.20942688
+scalar OsgEarthNet.uav[80] utilizationEnergyMaintenance 118287.31638336
+scalar OsgEarthNet.uav[80] utilizationEnergyCharge 254683.72705078
+scalar OsgEarthNet.uav[80] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[80] utilizationEnergyOverdrawMaintenance 47.543544769287
+scalar OsgEarthNet.uav[80] utilizationCountMissions 60
+scalar OsgEarthNet.uav[80] utilizationCountManeuversMission 818
+scalar OsgEarthNet.uav[80] utilizationCountManeuversMaintenance 120
+scalar OsgEarthNet.uav[80] utilizationCountChargeState 60
+scalar OsgEarthNet.uav[80] utilizationCountOverdrawnAfterMission 1
+scalar OsgEarthNet.uav[80] utilizationCountIdleState 31
+scalar OsgEarthNet.uav[80] utilizationFail 0
+scalar OsgEarthNet.uav[80] simulationTime 259200
+scalar OsgEarthNet.uav[81] utilizationSecMission 25469.788880658
+scalar OsgEarthNet.uav[81] utilizationSecMaintenance 29178.522775852
+scalar OsgEarthNet.uav[81] utilizationSecCharge 193459.35725769
+scalar OsgEarthNet.uav[81] utilizationSecIdle 11092.330085804
+scalar OsgEarthNet.uav[81] utilizationEnergyMission 123634.83892822
+scalar OsgEarthNet.uav[81] utilizationEnergyMaintenance 134936.68196869
+scalar OsgEarthNet.uav[81] utilizationEnergyCharge 259724.69189453
+scalar OsgEarthNet.uav[81] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[81] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[81] utilizationCountMissions 62
+scalar OsgEarthNet.uav[81] utilizationCountManeuversMission 872
+scalar OsgEarthNet.uav[81] utilizationCountManeuversMaintenance 124
+scalar OsgEarthNet.uav[81] utilizationCountChargeState 62
+scalar OsgEarthNet.uav[81] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[81] utilizationCountIdleState 32
+scalar OsgEarthNet.uav[81] utilizationFail 0
+scalar OsgEarthNet.uav[81] simulationTime 259200
+scalar OsgEarthNet.uav[82] utilizationSecMission 25323.602623257
+scalar OsgEarthNet.uav[82] utilizationSecMaintenance 29884.391376743
+scalar OsgEarthNet.uav[82] utilizationSecCharge 196140
+scalar OsgEarthNet.uav[82] utilizationSecIdle 7852.005
+scalar OsgEarthNet.uav[82] utilizationEnergyMission 123144.13445721
+scalar OsgEarthNet.uav[82] utilizationEnergyMaintenance 139346.81653213
+scalar OsgEarthNet.uav[82] utilizationEnergyCharge 260801.19873047
+scalar OsgEarthNet.uav[82] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[82] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[82] utilizationCountMissions 62
+scalar OsgEarthNet.uav[82] utilizationCountManeuversMission 787
+scalar OsgEarthNet.uav[82] utilizationCountManeuversMaintenance 125
+scalar OsgEarthNet.uav[82] utilizationCountChargeState 62
+scalar OsgEarthNet.uav[82] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[82] utilizationCountIdleState 29
+scalar OsgEarthNet.uav[82] utilizationFail 0
+scalar OsgEarthNet.uav[82] simulationTime 259200
+scalar OsgEarthNet.uav[83] utilizationSecMission 26464.196494344
+scalar OsgEarthNet.uav[83] utilizationSecMaintenance 27430.365329539
+scalar OsgEarthNet.uav[83] utilizationSecCharge 191289.53943463
+scalar OsgEarthNet.uav[83] utilizationSecIdle 14015.897741491
+scalar OsgEarthNet.uav[83] utilizationEnergyMission 129096.37863922
+scalar OsgEarthNet.uav[83] utilizationEnergyMaintenance 126949.03568649
+scalar OsgEarthNet.uav[83] utilizationEnergyCharge 255619.43334961
+scalar OsgEarthNet.uav[83] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[83] utilizationEnergyOverdrawMaintenance 262.52655029297
+scalar OsgEarthNet.uav[83] utilizationCountMissions 60
+scalar OsgEarthNet.uav[83] utilizationCountManeuversMission 830
+scalar OsgEarthNet.uav[83] utilizationCountManeuversMaintenance 120
+scalar OsgEarthNet.uav[83] utilizationCountChargeState 60
+scalar OsgEarthNet.uav[83] utilizationCountOverdrawnAfterMission 1
+scalar OsgEarthNet.uav[83] utilizationCountIdleState 33
+scalar OsgEarthNet.uav[83] utilizationFail 0
+scalar OsgEarthNet.uav[83] simulationTime 259200
+scalar OsgEarthNet.uav[84] utilizationSecMission 25812.401001901
+scalar OsgEarthNet.uav[84] utilizationSecMaintenance 31553.877547321
+scalar OsgEarthNet.uav[84] utilizationSecCharge 196821.71845078
+scalar OsgEarthNet.uav[84] utilizationSecIdle 5012.002
+scalar OsgEarthNet.uav[84] utilizationEnergyMission 125031.39976883
+scalar OsgEarthNet.uav[84] utilizationEnergyMaintenance 145627.49559784
+scalar OsgEarthNet.uav[84] utilizationEnergyCharge 269324.21142578
+scalar OsgEarthNet.uav[84] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[84] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[84] utilizationCountMissions 64
+scalar OsgEarthNet.uav[84] utilizationCountManeuversMission 774
+scalar OsgEarthNet.uav[84] utilizationCountManeuversMaintenance 128
+scalar OsgEarthNet.uav[84] utilizationCountChargeState 64
+scalar OsgEarthNet.uav[84] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[84] utilizationCountIdleState 17
+scalar OsgEarthNet.uav[84] utilizationFail 0
+scalar OsgEarthNet.uav[84] simulationTime 259200
+scalar OsgEarthNet.uav[85] utilizationSecMission 26524.953770364
+scalar OsgEarthNet.uav[85] utilizationSecMaintenance 28941.179851895
+scalar OsgEarthNet.uav[85] utilizationSecCharge 195711.86037774
+scalar OsgEarthNet.uav[85] utilizationSecIdle 8022.005
+scalar OsgEarthNet.uav[85] utilizationEnergyMission 129226.20215225
+scalar OsgEarthNet.uav[85] utilizationEnergyMaintenance 134720.02085495
+scalar OsgEarthNet.uav[85] utilizationEnergyCharge 262216.51306152
+scalar OsgEarthNet.uav[85] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[85] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[85] utilizationCountMissions 63
+scalar OsgEarthNet.uav[85] utilizationCountManeuversMission 843
+scalar OsgEarthNet.uav[85] utilizationCountManeuversMaintenance 126
+scalar OsgEarthNet.uav[85] utilizationCountChargeState 63
+scalar OsgEarthNet.uav[85] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[85] utilizationCountIdleState 25
+scalar OsgEarthNet.uav[85] utilizationFail 0
+scalar OsgEarthNet.uav[85] simulationTime 259200
+scalar OsgEarthNet.uav[86] utilizationSecMission 24329.191703129
+scalar OsgEarthNet.uav[86] utilizationSecMaintenance 30868.110046472
+scalar OsgEarthNet.uav[86] utilizationSecCharge 196160.6892504
+scalar OsgEarthNet.uav[86] utilizationSecIdle 7842.008
+scalar OsgEarthNet.uav[86] utilizationEnergyMission 120657.70285416
+scalar OsgEarthNet.uav[86] utilizationEnergyMaintenance 144741.88187408
+scalar OsgEarthNet.uav[86] utilizationEnergyCharge 265280.6496582
+scalar OsgEarthNet.uav[86] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[86] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[86] utilizationCountMissions 63
+scalar OsgEarthNet.uav[86] utilizationCountManeuversMission 833
+scalar OsgEarthNet.uav[86] utilizationCountManeuversMaintenance 126
+scalar OsgEarthNet.uav[86] utilizationCountChargeState 63
+scalar OsgEarthNet.uav[86] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[86] utilizationCountIdleState 22
+scalar OsgEarthNet.uav[86] utilizationFail 0
+scalar OsgEarthNet.uav[86] simulationTime 259200
+scalar OsgEarthNet.uav[87] utilizationSecMission 27369.763236426
+scalar OsgEarthNet.uav[87] utilizationSecMaintenance 29111.233272153
+scalar OsgEarthNet.uav[87] utilizationSecCharge 197197.00249142
+scalar OsgEarthNet.uav[87] utilizationSecIdle 5522
+scalar OsgEarthNet.uav[87] utilizationEnergyMission 134520.5415535
+scalar OsgEarthNet.uav[87] utilizationEnergyMaintenance 135713.40997696
+scalar OsgEarthNet.uav[87] utilizationEnergyCharge 267367.96972656
+scalar OsgEarthNet.uav[87] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[87] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[87] utilizationCountMissions 63
+scalar OsgEarthNet.uav[87] utilizationCountManeuversMission 888
+scalar OsgEarthNet.uav[87] utilizationCountManeuversMaintenance 126
+scalar OsgEarthNet.uav[87] utilizationCountChargeState 63
+scalar OsgEarthNet.uav[87] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[87] utilizationCountIdleState 25
+scalar OsgEarthNet.uav[87] utilizationFail 0
+scalar OsgEarthNet.uav[87] simulationTime 259200
+scalar OsgEarthNet.uav[88] utilizationSecMission 27974.97727068
+scalar OsgEarthNet.uav[88] utilizationSecMaintenance 27787.600065702
+scalar OsgEarthNet.uav[88] utilizationSecCharge 196415.42166362
+scalar OsgEarthNet.uav[88] utilizationSecIdle 7022
+scalar OsgEarthNet.uav[88] utilizationEnergyMission 137094.59025192
+scalar OsgEarthNet.uav[88] utilizationEnergyMaintenance 129141.0847435
+scalar OsgEarthNet.uav[88] utilizationEnergyCharge 264390.18701172
+scalar OsgEarthNet.uav[88] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[88] utilizationEnergyOverdrawMaintenance 44.933532714844
+scalar OsgEarthNet.uav[88] utilizationCountMissions 63
+scalar OsgEarthNet.uav[88] utilizationCountManeuversMission 918
+scalar OsgEarthNet.uav[88] utilizationCountManeuversMaintenance 125
+scalar OsgEarthNet.uav[88] utilizationCountChargeState 63
+scalar OsgEarthNet.uav[88] utilizationCountOverdrawnAfterMission 1
+scalar OsgEarthNet.uav[88] utilizationCountIdleState 30
+scalar OsgEarthNet.uav[88] utilizationFail 0
+scalar OsgEarthNet.uav[88] simulationTime 259200
+scalar OsgEarthNet.uav[89] utilizationSecMission 28763.474189585
+scalar OsgEarthNet.uav[89] utilizationSecMaintenance 27059.301659896
+scalar OsgEarthNet.uav[89] utilizationSecCharge 191792.73383851
+scalar OsgEarthNet.uav[89] utilizationSecIdle 11584.489312011
+scalar OsgEarthNet.uav[89] utilizationEnergyMission 137471.44263458
+scalar OsgEarthNet.uav[89] utilizationEnergyMaintenance 126664.02984619
+scalar OsgEarthNet.uav[89] utilizationEnergyCharge 260049.69421387
+scalar OsgEarthNet.uav[89] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[89] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[89] utilizationCountMissions 62
+scalar OsgEarthNet.uav[89] utilizationCountManeuversMission 794
+scalar OsgEarthNet.uav[89] utilizationCountManeuversMaintenance 124
+scalar OsgEarthNet.uav[89] utilizationCountChargeState 62
+scalar OsgEarthNet.uav[89] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[89] utilizationCountIdleState 26
+scalar OsgEarthNet.uav[89] utilizationFail 0
+scalar OsgEarthNet.uav[89] simulationTime 259200
+scalar OsgEarthNet.uav[90] utilizationSecMission 27425.440798833
+scalar OsgEarthNet.uav[90] utilizationSecMaintenance 28416.388394329
+scalar OsgEarthNet.uav[90] utilizationSecCharge 194856.15680684
+scalar OsgEarthNet.uav[90] utilizationSecIdle 8502.013
+scalar OsgEarthNet.uav[90] utilizationEnergyMission 130998.64953232
+scalar OsgEarthNet.uav[90] utilizationEnergyMaintenance 131178.8099823
+scalar OsgEarthNet.uav[90] utilizationEnergyCharge 262989.18945312
+scalar OsgEarthNet.uav[90] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[90] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[90] utilizationCountMissions 62
+scalar OsgEarthNet.uav[90] utilizationCountManeuversMission 774
+scalar OsgEarthNet.uav[90] utilizationCountManeuversMaintenance 124
+scalar OsgEarthNet.uav[90] utilizationCountChargeState 62
+scalar OsgEarthNet.uav[90] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[90] utilizationCountIdleState 23
+scalar OsgEarthNet.uav[90] utilizationFail 0
+scalar OsgEarthNet.uav[90] simulationTime 259200
+scalar OsgEarthNet.uav[91] utilizationSecMission 28692.525068826
+scalar OsgEarthNet.uav[91] utilizationSecMaintenance 27290.055869215
+scalar OsgEarthNet.uav[91] utilizationSecCharge 194425.57906838
+scalar OsgEarthNet.uav[91] utilizationSecIdle 8791.8389935759
+scalar OsgEarthNet.uav[91] utilizationEnergyMission 136118.89523315
+scalar OsgEarthNet.uav[91] utilizationEnergyMaintenance 126968.913311
+scalar OsgEarthNet.uav[91] utilizationEnergyCharge 264461.61108398
+scalar OsgEarthNet.uav[91] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[91] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[91] utilizationCountMissions 62
+scalar OsgEarthNet.uav[91] utilizationCountManeuversMission 826
+scalar OsgEarthNet.uav[91] utilizationCountManeuversMaintenance 124
+scalar OsgEarthNet.uav[91] utilizationCountChargeState 62
+scalar OsgEarthNet.uav[91] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[91] utilizationCountIdleState 22
+scalar OsgEarthNet.uav[91] utilizationFail 0
+scalar OsgEarthNet.uav[91] simulationTime 259200
+scalar OsgEarthNet.uav[92] utilizationSecMission 27198.002464298
+scalar OsgEarthNet.uav[92] utilizationSecMaintenance 29251.091735391
+scalar OsgEarthNet.uav[92] utilizationSecCharge 196718.90080031
+scalar OsgEarthNet.uav[92] utilizationSecIdle 6032.004
+scalar OsgEarthNet.uav[92] utilizationEnergyMission 132148.69169998
+scalar OsgEarthNet.uav[92] utilizationEnergyMaintenance 135276.76270294
+scalar OsgEarthNet.uav[92] utilizationEnergyCharge 264553.78356934
+scalar OsgEarthNet.uav[92] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[92] utilizationEnergyOverdrawMaintenance 39.945957183838
+scalar OsgEarthNet.uav[92] utilizationCountMissions 64
+scalar OsgEarthNet.uav[92] utilizationCountManeuversMission 969
+scalar OsgEarthNet.uav[92] utilizationCountManeuversMaintenance 128
+scalar OsgEarthNet.uav[92] utilizationCountChargeState 64
+scalar OsgEarthNet.uav[92] utilizationCountOverdrawnAfterMission 1
+scalar OsgEarthNet.uav[92] utilizationCountIdleState 26
+scalar OsgEarthNet.uav[92] utilizationFail 0
+scalar OsgEarthNet.uav[92] simulationTime 259200
+scalar OsgEarthNet.uav[93] utilizationSecMission 27143.179573773
+scalar OsgEarthNet.uav[93] utilizationSecMaintenance 29074.663412687
+scalar OsgEarthNet.uav[93] utilizationSecCharge 195820.14401354
+scalar OsgEarthNet.uav[93] utilizationSecIdle 7162.012
+scalar OsgEarthNet.uav[93] utilizationEnergyMission 129886.89216614
+scalar OsgEarthNet.uav[93] utilizationEnergyMaintenance 135854.53588867
+scalar OsgEarthNet.uav[93] utilizationEnergyCharge 265575.65136719
+scalar OsgEarthNet.uav[93] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[93] utilizationEnergyOverdrawMaintenance 438.64242553711
+scalar OsgEarthNet.uav[93] utilizationCountMissions 63
+scalar OsgEarthNet.uav[93] utilizationCountManeuversMission 783
+scalar OsgEarthNet.uav[93] utilizationCountManeuversMaintenance 126
+scalar OsgEarthNet.uav[93] utilizationCountChargeState 63
+scalar OsgEarthNet.uav[93] utilizationCountOverdrawnAfterMission 1
+scalar OsgEarthNet.uav[93] utilizationCountIdleState 20
+scalar OsgEarthNet.uav[93] utilizationFail 0
+scalar OsgEarthNet.uav[93] simulationTime 259200
+scalar OsgEarthNet.uav[94] utilizationSecMission 25506.255517232
+scalar OsgEarthNet.uav[94] utilizationSecMaintenance 32226.200031578
+scalar OsgEarthNet.uav[94] utilizationSecCharge 197205.53945119
+scalar OsgEarthNet.uav[94] utilizationSecIdle 4262.004
+scalar OsgEarthNet.uav[94] utilizationEnergyMission 123731.76943588
+scalar OsgEarthNet.uav[94] utilizationEnergyMaintenance 150188.56947708
+scalar OsgEarthNet.uav[94] utilizationEnergyCharge 269867.15209961
+scalar OsgEarthNet.uav[94] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[94] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[94] utilizationCountMissions 65
+scalar OsgEarthNet.uav[94] utilizationCountManeuversMission 819
+scalar OsgEarthNet.uav[94] utilizationCountManeuversMaintenance 130
+scalar OsgEarthNet.uav[94] utilizationCountChargeState 65
+scalar OsgEarthNet.uav[94] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[94] utilizationCountIdleState 14
+scalar OsgEarthNet.uav[94] utilizationFail 0
+scalar OsgEarthNet.uav[94] simulationTime 259200
+scalar OsgEarthNet.uav[95] utilizationSecMission 27867.354291981
+scalar OsgEarthNet.uav[95] utilizationSecMaintenance 28489.821145533
+scalar OsgEarthNet.uav[95] utilizationSecCharge 195480.81656249
+scalar OsgEarthNet.uav[95] utilizationSecIdle 7362.007
+scalar OsgEarthNet.uav[95] utilizationEnergyMission 134476.86510468
+scalar OsgEarthNet.uav[95] utilizationEnergyMaintenance 132934.18899155
+scalar OsgEarthNet.uav[95] utilizationEnergyCharge 265513.78735352
+scalar OsgEarthNet.uav[95] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[95] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[95] utilizationCountMissions 63
+scalar OsgEarthNet.uav[95] utilizationCountManeuversMission 761
+scalar OsgEarthNet.uav[95] utilizationCountManeuversMaintenance 126
+scalar OsgEarthNet.uav[95] utilizationCountChargeState 63
+scalar OsgEarthNet.uav[95] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[95] utilizationCountIdleState 20
+scalar OsgEarthNet.uav[95] utilizationFail 0
+scalar OsgEarthNet.uav[95] simulationTime 259200
+scalar OsgEarthNet.uav[96] utilizationSecMission 26458.835686489
+scalar OsgEarthNet.uav[96] utilizationSecMaintenance 29306.512678542
+scalar OsgEarthNet.uav[96] utilizationSecCharge 194933.0673677
+scalar OsgEarthNet.uav[96] utilizationSecIdle 8501.5832672678
+scalar OsgEarthNet.uav[96] utilizationEnergyMission 127386.08815384
+scalar OsgEarthNet.uav[96] utilizationEnergyMaintenance 137382.6906395
+scalar OsgEarthNet.uav[96] utilizationEnergyCharge 264335.70214844
+scalar OsgEarthNet.uav[96] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[96] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[96] utilizationCountMissions 64
+scalar OsgEarthNet.uav[96] utilizationCountManeuversMission 831
+scalar OsgEarthNet.uav[96] utilizationCountManeuversMaintenance 128
+scalar OsgEarthNet.uav[96] utilizationCountChargeState 64
+scalar OsgEarthNet.uav[96] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[96] utilizationCountIdleState 19
+scalar OsgEarthNet.uav[96] utilizationFail 0
+scalar OsgEarthNet.uav[96] simulationTime 259200
+scalar OsgEarthNet.uav[97] utilizationSecMission 26653.756697215
+scalar OsgEarthNet.uav[97] utilizationSecMaintenance 30474.709532884
+scalar OsgEarthNet.uav[97] utilizationSecCharge 198439.5327699
+scalar OsgEarthNet.uav[97] utilizationSecIdle 3632
+scalar OsgEarthNet.uav[97] utilizationEnergyMission 128177.6731987
+scalar OsgEarthNet.uav[97] utilizationEnergyMaintenance 141440.80884933
+scalar OsgEarthNet.uav[97] utilizationEnergyCharge 270023.35595703
+scalar OsgEarthNet.uav[97] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[97] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[97] utilizationCountMissions 64
+scalar OsgEarthNet.uav[97] utilizationCountManeuversMission 862
+scalar OsgEarthNet.uav[97] utilizationCountManeuversMaintenance 127
+scalar OsgEarthNet.uav[97] utilizationCountChargeState 64
+scalar OsgEarthNet.uav[97] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[97] utilizationCountIdleState 17
+scalar OsgEarthNet.uav[97] utilizationFail 0
+scalar OsgEarthNet.uav[97] simulationTime 259200
+scalar OsgEarthNet.uav[98] utilizationSecMission 30248.729500798
+scalar OsgEarthNet.uav[98] utilizationSecMaintenance 26369.265499202
+scalar OsgEarthNet.uav[98] utilizationSecCharge 195270
+scalar OsgEarthNet.uav[98] utilizationSecIdle 7312.004
+scalar OsgEarthNet.uav[98] utilizationEnergyMission 146305.7089653
+scalar OsgEarthNet.uav[98] utilizationEnergyMaintenance 122911.67452146
+scalar OsgEarthNet.uav[98] utilizationEnergyCharge 264667.94604492
+scalar OsgEarthNet.uav[98] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[98] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[98] utilizationCountMissions 63
+scalar OsgEarthNet.uav[98] utilizationCountManeuversMission 793
+scalar OsgEarthNet.uav[98] utilizationCountManeuversMaintenance 126
+scalar OsgEarthNet.uav[98] utilizationCountChargeState 62
+scalar OsgEarthNet.uav[98] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[98] utilizationCountIdleState 27
+scalar OsgEarthNet.uav[98] utilizationFail 0
+scalar OsgEarthNet.uav[98] simulationTime 259200
+scalar OsgEarthNet.uav[99] utilizationSecMission 27001.981447567
+scalar OsgEarthNet.uav[99] utilizationSecMaintenance 29864.607724586
+scalar OsgEarthNet.uav[99] utilizationSecCharge 198386.89254754
+scalar OsgEarthNet.uav[99] utilizationSecIdle 3946.5172803027
+scalar OsgEarthNet.uav[99] utilizationEnergyMission 131018.83210754
+scalar OsgEarthNet.uav[99] utilizationEnergyMaintenance 139473.85075378
+scalar OsgEarthNet.uav[99] utilizationEnergyCharge 269925.25244141
+scalar OsgEarthNet.uav[99] utilizationEnergyOverdrawMission 0
+scalar OsgEarthNet.uav[99] utilizationEnergyOverdrawMaintenance 0
+scalar OsgEarthNet.uav[99] utilizationCountMissions 65
+scalar OsgEarthNet.uav[99] utilizationCountManeuversMission 909
+scalar OsgEarthNet.uav[99] utilizationCountManeuversMaintenance 130
+scalar OsgEarthNet.uav[99] utilizationCountChargeState 65
+scalar OsgEarthNet.uav[99] utilizationCountOverdrawnAfterMission 0
+scalar OsgEarthNet.uav[99] utilizationCountIdleState 14
+scalar OsgEarthNet.uav[99] utilizationFail 0
+scalar OsgEarthNet.uav[99] simulationTime 259200
+scalar OsgEarthNet.cs[0] usedPower 5803249.8457615
+scalar OsgEarthNet.cs[0] chargedPower 5803249.8457615
+scalar OsgEarthNet.cs[0] chargedMobileNodes 1052
+scalar OsgEarthNet.cs[0] reservations 1389
+scalar OsgEarthNet.cs[1] usedPower 5709008.3594726
+scalar OsgEarthNet.cs[1] chargedPower 5709008.3594726
+scalar OsgEarthNet.cs[1] chargedMobileNodes 982
+scalar OsgEarthNet.cs[1] reservations 1325
+scalar OsgEarthNet.cs[2] usedPower 10112697.007287
+scalar OsgEarthNet.cs[2] chargedPower 10112697.007287
+scalar OsgEarthNet.cs[2] chargedMobileNodes 1921
+scalar OsgEarthNet.cs[2] reservations 2422
+
