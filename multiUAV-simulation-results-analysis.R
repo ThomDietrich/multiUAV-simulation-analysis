@@ -29,8 +29,9 @@ graphics.off()
 #####################################################################
 # Settings ##########################################################
 
-logdata_folder <- "./multiUAV-simulation-results/numUAVs/"
+logdata_folder <- "./multiUAV-simulation-results/numUAVs_24x/"
 tikzLocation   <- "./tikz/"
+textwidth <- 5.8
 
 # http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
 #graphCol1 <- "steelblue"
@@ -42,9 +43,12 @@ tikzLocation   <- "./tikz/"
 graphCol1 <- "#4682B4" #steelblue
 graphCol2 <- "#B8850A" #mygold
 graphCol2_dark <- "goldenrod4"
-graphCol3 <- "#B3B3B3" #mygray
-graphCol3_dark <- "#737373"
-graphCol3_darkdark <- "#434343"
+#graphCol3 <- "#B3B3B3" #mygray
+#graphCol3_dark <- "#737373"
+#graphCol3_darkdark <- "#434343"
+graphCol3 <- gray(0.70) #mygray
+graphCol3_dark <- gray(0.45)
+graphCol3_darkdark <- gray(0.25)
 graphCol4 <- "#780116" #myred
 
 #####################################################################
@@ -153,7 +157,7 @@ for (filename in list.files(logdata_folder,"*.sca")) {
     logdata.file <- rbind(logdata.file, logdata.line)
     
     cnt <- cnt + 1
-    if (cnt %% 30 == 0) cat(".")
+    if (cnt %% 50 == 0) cat(".")
   }
   cat("\n")
   df.all <- rbind(df.all, logdata.file)
@@ -223,30 +227,34 @@ if (length(quants) > 1) {
 }
 
 
-simtimeSec <- 0
-cat("Proofchecking Simtime ... ")
-tolerance = 0.1
-for (replMethod in replMs) {
-  for (biw in biWeights) {
-    for (q in quants) {
-      for (replsm in replSearchMs) {
-        for (numuavs in numUAVss) {
-          for (sim_run in sim_runs) {
-            for (uav_index in 0:uavs_count) {
-              df_subset <- subset(df.all.uav, replM == replMethod & match(replSearchM,replsm) & match(quant,q) & match(biWeight,biw) & match(numUAVs,numuavs) & simRun == sim_run & index == uav_index
-                                  & metric %in% c('utilizationSecMaintenance', 'utilizationSecMission', 'utilizationSecCharge', 'utilizationSecIdle')
-              )
-              if (nrow(df_subset) > 0) {
-                if (nrow(df_subset) != 4) {
-                  print(df_subset)
-                  stop("Subset is not unique. Either selection too broad or simlulation ran twice.")
+if (FALSE) {
+  simtimeSec <- 0
+  cat("Proofchecking Simtime ... ")
+  tolerance = 0.1
+  for (replMethod in replMs) {
+    for (biw in biWeights) {
+      for (q in quants) {
+        for (replsm in replSearchMs) {
+          for (numuavs in numUAVss) {
+            cat(numuavs)
+            for (sim_run in sim_runs) {
+              cat(".")
+              for (uav_index in 0:uavs_count) {
+                df_subset <- subset(df.all.uav, replM == replMethod & match(replSearchM,replsm) & match(quant,q) & match(biWeight,biw) & match(numUAVs,numuavs) & simRun == sim_run & index == uav_index
+                                    & metric %in% c('utilizationSecMaintenance', 'utilizationSecMission', 'utilizationSecCharge', 'utilizationSecIdle')
+                )
+                if (nrow(df_subset) > 0) {
+                  if (nrow(df_subset) != 4) {
+                    print(df_subset)
+                    stop("Subset is not unique. Either selection too broad or simlulation ran twice.")
+                  }
+                  #print(sum(df_subset$value))
+                  if (simtimeSec == 0) {
+                    simtimeSec = as.integer(0.5 + sum(df_subset$value))
+                    cat(paste("Simulation time:", simtimeSec))
+                  }
+                  else if (abs(simtimeSec - sum(df_subset$value)) > tolerance) stop(paste("Simtime missmatch! Hours:", sum(df_subset$value)/3600))
                 }
-                #print(sum(df_subset$value))
-                if (simtimeSec == 0) {
-                  simtimeSec = as.integer(0.5 + sum(df_subset$value))
-                  cat(paste("Simulation time:", simtimeSec))
-                }
-                else if (abs(simtimeSec - sum(df_subset$value)) > tolerance) stop(paste("Simtime missmatch! Hours:", sum(df_subset$value)/3600))
               }
             }
           }
@@ -254,6 +262,8 @@ for (replMethod in replMs) {
       }
     }
   }
+} else {
+  simtimeSec <- 259200
 }
 
 #####################################################################
@@ -290,9 +300,12 @@ for (replMethod in replMs) {
     for (q in quants) {
       for (replsm in replSearchMs) {
         for (numuavs in numUAVss) {
+          cat(numuavs)
           for (sim_run in sim_runs) {
+            cat(".")
             for (uav_index in 0:uavs_count) {
-              df_subset <- subset(df.all.uav, replM == replMethod & match(replSearchM,replsm) & match(quant,q) & match(biWeight,biw) & match(numUAVs,numuavs) & simRun == sim_run & index == uav_index)
+              #df_subset <- subset(df.all.uav, replM == replMethod & match(replSearchM,replsm) & match(quant,q) & match(biWeight,biw) & match(numUAVs,numuavs) & simRun == sim_run & index == uav_index)
+              df_subset <- subset(df.all.uav, numUAVs == numuavs & simRun == sim_run & index == uav_index)
               if (nrow(df_subset) == 0) next
               df <- data.frame(
                 basename =    levels(df_subset$basename),
@@ -340,7 +353,9 @@ for (replMethod in replMs) {
     for (q in quants) {
       for (replsm in replSearchMs) {
         for (numuavs in numUAVss) {
+          cat(numuavs)
           for (sim_run in sim_runs) {
+            cat(".")
             for (cs_index in 0:cs_count) {
               df_subset <- subset(df.all.cs, replM == replMethod & match(replSearchM,replsm) & match(quant,q) & match(biWeight,biw) & match(numUAVs,numuavs) & simRun == sim_run & index == cs_index)
               if (nrow(df_subset) == 0) next
@@ -399,7 +414,7 @@ starting_cs <- as.factor(map_id_to_location(1 + (df$index %% 3)))
 
 secMission.quota <- 100 / (df$secMission + df$secMaintenance + df$secCharge) * df$secMission
 
-tikz(paste(tikzLocation, "8_initial_location_plot_R.tex", sep = ""), standAlone=TRUE, timestamp = FALSE, width=5.99, height=2.0)
+tikz(paste(tikzLocation, "8_initial_location_plot_R.tex", sep = ""), standAlone=TRUE, timestamp=FALSE, width=textwidth, height=2.0)
 
 ggplot(df, aes(x = starting_cs, y = secMission / 60)) +
   geom_jitter(width=0.05, color=graphCol3_dark, alpha=0.3) +
@@ -413,7 +428,7 @@ dev.off()
 
 df <- subset(df.red.uav, replM==0 & quant==0.95)
 
-tikz(paste(tikzLocation, "8_cs_popularity_plot_R.tex", sep = ""), standAlone=TRUE, timestamp = FALSE, width=5.99, height=2.0)
+tikz(paste(tikzLocation, "8_cs_popularity_plot_R.tex", sep = ""), standAlone=TRUE, timestamp=FALSE, width=textwidth, height=2.0)
 
 ggplot(df, aes(x = map_id_to_location(index), y = chargedMobileNodes)) +
   geom_jitter(width=0.05, color=graphCol3_dark, alpha=0.6) +
@@ -473,7 +488,7 @@ ratios <- ratios.time
 #ratios <- rbind(ratios.time, ratios.energy)
 
 
-tikz(paste(tikzLocation, "8_life_cycle_time_ratio_plot_R.tex", sep = ""), standAlone=TRUE, timestamp = FALSE, width=5.9, height=1.3)
+tikz(paste(tikzLocation, "8_life_cycle_time_ratio_plot_R.tex", sep = ""), standAlone=TRUE, timestamp=FALSE, width=textwidth, height=1.3)
 
 ggplot(ratios, aes(x=class, fill=metric2, y=percentage, label=percentage)) +
   geom_col(width = 0.5) +
@@ -540,7 +555,7 @@ for (replMethod in replMs) {
 
 ratios.red <- subset(ratios, class == "time")
 
-tikz(paste(tikzLocation, "8_life_cycle_time_ratio_replMs_plot_R.tex", sep = ""), standAlone=TRUE, timestamp = FALSE, width=5.9, height=2.1)
+tikz(paste(tikzLocation, "8_life_cycle_time_ratio_replMs_plot_R.tex", sep = ""), standAlone=TRUE, timestamp=FALSE, width=textwidth, height=2.1)
 
 ggplot(ratios.red, aes(x=replM, fill=metric2, y=percentage, label=percentage)) +
   geom_col(width = 0.7) +
@@ -597,7 +612,7 @@ plot2 <- ggplot(df.summarize, aes(x=biWeight, y=energyEfficiency)) +
   theme(axis.title.x=element_blank()) +
   labs(x="Bi-Objective Weight $w$", y="Energy Efficiency [\\%]")
 
-tikz(paste(tikzLocation, "8_biWeight_sweep_plot_R.tex", sep = ""), standAlone=TRUE, timestamp = FALSE, width=5.9, height=2.2)
+tikz(paste(tikzLocation, "8_biWeight_sweep_plot_R.tex", sep = ""), standAlone=TRUE, timestamp=FALSE, width=textwidth, height=2.2)
 plot_grid(plot1, plot2)
 dev.off()
 
@@ -670,7 +685,7 @@ for (replSearchMethod in replSearchMs) {
 #ratios.red <- subset(ratios, class == "energy")
 ratios.red <- subset(ratios, class == "time")
 
-tikz(paste(tikzLocation, "8_life_cycle_time_ratio_replSearchMs_plot_R.tex", sep = ""), standAlone=TRUE, timestamp = FALSE, width=5.9, height=1.6)
+tikz(paste(tikzLocation, "8_life_cycle_time_ratio_replSearchMs_plot_R.tex", sep = ""), standAlone=TRUE, timestamp=FALSE, width=textwidth, height=1.6)
 
 ggplot(ratios.red, aes(x=replSearchM, fill=metric2, y=percentage, label=percentage)) +
   geom_col(width = 0.7) +
@@ -792,34 +807,141 @@ df.sr_t <- read.table(header = TRUE, text = 'numUAVs simRun duration
   53 7 8623.267306213089
   53 8 8510.975530879134
   53 9 10096.386755213517
-  55 0 259200
-  55 1 12214.761112164032
-  55 10 14961.996276695687
-  55 11 16947.089895691704
-  55 2 11968.102906864894
-  55 3 135976.456809268316
-  55 4 23955.077221052637
-  55 5 259200
-  55 6 259200
-  55 7 23618.338515012631
-  55 8 106044.403908291859
-  55 9 23727.97068337664
+  55 0 19730.454951961332
+  55 1 125780.256641793666
+  55 10 16175.15311631211
+  55 11 14689.527549561394
+  55 12 259200
+  55 13 117647.573994620745
+  55 14 259200
+  55 15 14694.589987237309
+  55 16 132613.252492708795
+  55 17 43265.976210397325
+  55 18 113262.236548570913
+  55 19 112563.467617132723
+  55 2 27213.129439727314
+  55 20 103933.732803648465
+  55 21 20808.595081149542
+  55 22 19171.002639192661
+  55 23 16868.981130428109
+  55 3 13932.987959550739
+  55 4 72880.315625093948
+  55 5 13690.586931179329
+  55 6 11483.581349291625
+  55 7 18676.813609118913
+  55 8 259200
+  55 9 33543.917212916884
+  56 0 259200
+  56 1 259200
+  56 10 259200
+  56 11 259200
+  56 12 259200
+  56 13 259200
+  56 14 259200
+  56 15 259200
+  56 16 259200
+  56 17 259200
+  56 18 259200
+  56 19 259200
+  56 2 259200
+  56 20 259200
+  56 21 259200
+  56 22 259200
+  56 23 259200
+  56 3 259200
+  56 4 259200
+  56 5 259200
+  56 6 259200
+  56 7 259200
+  56 8 259200
+  56 9 259200
+  57 0 259200
+  57 1 259200
+  57 10 259200
+  57 11 259200
+  57 12 259200
+  57 13 259200
+  57 14 259200
+  57 15 259200
+  57 16 259200
+  57 17 259200
+  57 18 259200
+  57 19 259200
+  57 2 259200
+  57 20 259200
+  57 21 259200
+  57 22 259200
+  57 23 259200
+  57 3 259200
+  57 4 259200
+  57 5 259200
+  57 6 259200
+  57 7 259200
+  57 8 259200
+  57 9 259200
   58 0 259200
   58 1 259200
   58 10 259200
   58 11 259200
+  58 12 259200
+  58 13 259200
+  58 14 259200
+  58 15 259200
+  58 16 259200
+  58 17 259200
+  58 18 259200
+  58 19 259200
   58 2 259200
+  58 20 259200
+  58 21 259200
+  58 22 259200
+  58 23 259200
   58 3 259200
+  58 4 259200
   58 5 259200
   58 6 259200
   58 7 259200
   58 8 259200
   58 9 259200
+  59 0 259200
+  59 10 259200
+  59 11 259200
+  59 12 259200
+  59 13 259200
+  59 14 259200
+  59 15 259200
+  59 16 259200
+  59 17 259200
+  59 18 259200
+  59 19 259200
+  59 2 259200
+  59 20 259200
+  59 21 259200
+  59 22 259200
+  59 23 259200
+  59 3 259200
+  59 4 259200
+  59 5 259200
+  59 6 259200
+  59 7 259200
+  59 8 259200
   60 0 259200
   60 1 259200
   60 10 259200
   60 11 259200
+  60 12 259200
+  60 13 259200
+  60 14 259200
+  60 15 259200
+  60 16 259200
+  60 17 259200
+  60 18 259200
+  60 19 259200
   60 2 259200
+  60 20 259200
+  60 21 259200
+  60 22 259200
+  60 23 259200
   60 3 259200
   60 4 259200
   60 5 259200
@@ -827,22 +949,114 @@ df.sr_t <- read.table(header = TRUE, text = 'numUAVs simRun duration
   60 7 259200
   60 8 259200
   60 9 259200
-  65 0 259200
-  65 1 259200
-  65 10 259200
-  65 11 259200
-  65 2 259200
-  65 4 259200
-  65 5 259200
-  65 6 259200
-  65 7 259200
-  65 8 259200
-  65 9 259200
+  62 0 259200
+  62 1 259200
+  62 10 259200
+  62 11 259200
+  62 12 259200
+  62 13 259200
+  62 14 259200
+  62 15 259200
+  62 16 259200
+  62 17 259200
+  62 18 259200
+  62 19 259200
+  62 2 259200
+  62 20 259200
+  62 21 259200
+  62 22 259200
+  62 23 259200
+  62 3 259200
+  62 4 259200
+  62 5 259200
+  62 6 259200
+  62 7 259200
+  62 8 259200
+  62 9 259200
+  64 0 259200
+  64 1 259200
+  64 10 259200
+  64 11 259200
+  64 13 259200
+  64 14 259200
+  64 15 259200
+  64 16 259200
+  64 17 259200
+  64 18 259200
+  64 19 259200
+  64 2 259200
+  64 20 259200
+  64 21 259200
+  64 22 259200
+  64 23 259200
+  64 3 259200
+  64 4 259200
+  64 5 259200
+  64 6 259200
+  64 7 259200
+  64 8 259200
+  64 9 259200
+  66 0 259200
+  66 1 259200
+  66 10 259200
+  66 11 259200
+  66 12 259200
+  66 13 259200
+  66 15 259200
+  66 16 259200
+  66 17 259200
+  66 18 259200
+  66 19 259200
+  66 20 259200
+  66 21 259200
+  66 22 259200
+  66 23 259200
+  66 4 259200
+  66 5 259200
+  66 6 259200
+  66 7 259200
+  66 8 259200
+  66 9 259200
+  68 0 259200
+  68 1 259200
+  68 10 259200
+  68 11 259200
+  68 12 259200
+  68 13 259200
+  68 14 259200
+  68 15 259200
+  68 16 259200
+  68 17 259200
+  68 18 259200
+  68 19 259200
+  68 2 259200
+  68 20 259200
+  68 21 259200
+  68 22 259200
+  68 23 259200
+  68 3 259200
+  68 4 259200
+  68 5 259200
+  68 6 259200
+  68 7 259200
+  68 8 259200
+  68 9 259200
   70 0 259200
   70 1 259200
   70 10 259200
   70 11 259200
+  70 13 259200
+  70 14 259200
+  70 15 259200
+  70 16 259200
+  70 17 259200
+  70 18 259200
+  70 19 259200
   70 2 259200
+  70 20 259200
+  70 21 259200
+  70 22 259200
+  70 23 259200
   70 3 259200
   70 4 259200
   70 5 259200
@@ -850,22 +1064,93 @@ df.sr_t <- read.table(header = TRUE, text = 'numUAVs simRun duration
   70 7 259200
   70 8 259200
   70 9 259200
+  72 0 259200
+  72 1 259200
+  72 10 259200
+  72 11 259200
+  72 12 259200
+  72 13 259200
+  72 14 259200
+  72 15 259200
+  72 16 259200
+  72 17 259200
+  72 18 259200
+  72 19 259200
+  72 2 259200
+  72 20 259200
+  72 21 259200
+  72 22 259200
+  72 23 259200
+  72 3 259200
+  72 4 259200
+  72 5 259200
+  72 6 259200
+  72 7 259200
+  72 8 259200
+  72 9 259200
   75 0 259200
   75 1 259200
   75 10 259200
   75 11 259200
+  75 12 259200
+  75 13 259200
+  75 14 259200
+  75 15 259200
+  75 16 259200
+  75 17 259200
+  75 18 259200
+  75 19 259200
   75 2 259200
+  75 20 259200
+  75 21 259200
+  75 22 259200
+  75 23 259200
   75 3 259200
   75 4 259200
+  75 5 259200
   75 6 259200
   75 7 259200
   75 8 259200
   75 9 259200
+  78 0 259200
+  78 1 259200
+  78 10 259200
+  78 11 259200
+  78 12 259200
+  78 13 259200
+  78 14 259200
+  78 15 259200
+  78 16 259200
+  78 17 259200
+  78 18 259200
+  78 19 259200
+  78 2 259200
+  78 20 259200
+  78 21 259200
+  78 22 259200
+  78 23 259200
+  78 3 259200
+  78 4 259200
+  78 6 259200
+  78 8 259200
+  78 9 259200
   80 0 259200
   80 1 259200
   80 10 259200
   80 11 259200
+  80 12 259200
+  80 13 259200
+  80 14 259200
+  80 15 259200
+  80 16 259200
+  80 17 259200
+  80 18 259200
+  80 19 259200
   80 2 259200
+  80 20 259200
+  80 21 259200
+  80 22 259200
+  80 23 259200
   80 3 259200
   80 4 259200
   80 5 259200
@@ -873,11 +1158,46 @@ df.sr_t <- read.table(header = TRUE, text = 'numUAVs simRun duration
   80 7 259200
   80 8 259200
   80 9 259200
+  82 0 259200
+  82 1 259200
+  82 10 259200
+  82 11 259200
+  82 12 259200
+  82 13 259200
+  82 14 259200
+  82 15 259200
+  82 16 259200
+  82 17 259200
+  82 18 259200
+  82 19 259200
+  82 2 259200
+  82 20 259200
+  82 21 259200
+  82 22 259200
+  82 23 259200
+  82 3 259200
+  82 4 259200
+  82 5 259200
+  82 6 259200
+  82 7 259200
+  82 9 259200
   85 0 259200
   85 1 259200
   85 10 259200
   85 11 259200
+  85 12 259200
+  85 13 259200
+  85 14 259200
+  85 15 259200
+  85 16 259200
+  85 17 259200
+  85 18 259200
+  85 19 259200
   85 2 259200
+  85 20 259200
+  85 21 259200
+  85 22 259200
+  85 23 259200
   85 3 259200
   85 4 259200
   85 5 259200
@@ -885,11 +1205,45 @@ df.sr_t <- read.table(header = TRUE, text = 'numUAVs simRun duration
   85 7 259200
   85 8 259200
   85 9 259200
+  88 0 259200
+  88 1 259200
+  88 10 259200
+  88 11 259200
+  88 13 259200
+  88 14 259200
+  88 15 259200
+  88 16 259200
+  88 17 259200
+  88 18 259200
+  88 19 259200
+  88 2 259200
+  88 20 259200
+  88 21 259200
+  88 22 259200
+  88 23 259200
+  88 3 259200
+  88 4 259200
+  88 5 259200
+  88 6 259200
+  88 7 259200
+  88 8 259200
+  88 9 259200
   90 0 259200
   90 1 259200
   90 10 259200
   90 11 259200
+  90 12 259200
+  90 13 259200
+  90 14 259200
+  90 15 259200
+  90 16 259200
+  90 17 259200
+  90 18 259200
   90 2 259200
+  90 20 259200
+  90 21 259200
+  90 22 259200
+  90 23 259200
   90 3 259200
   90 4 259200
   90 5 259200
@@ -897,10 +1251,47 @@ df.sr_t <- read.table(header = TRUE, text = 'numUAVs simRun duration
   90 7 259200
   90 8 259200
   90 9 259200
+  92 0 259200
+  92 1 259200
+  92 10 259200
+  92 11 259200
+  92 12 259200
+  92 13 259200
+  92 14 259200
+  92 15 259200
+  92 16 259200
+  92 17 259200
+  92 18 259200
+  92 19 259200
+  92 2 259200
+  92 20 259200
+  92 21 259200
+  92 22 259200
+  92 23 259200
+  92 3 259200
+  92 4 259200
+  92 5 259200
+  92 6 259200
+  92 7 259200
+  92 8 259200
+  92 9 259200
   95 0 259200
   95 1 259200
   95 10 259200
+  95 11 259200
+  95 12 259200
+  95 13 259200
+  95 14 259200
+  95 15 259200
+  95 16 259200
+  95 17 259200
+  95 18 259200
+  95 19 259200
   95 2 259200
+  95 20 259200
+  95 21 259200
+  95 22 259200
+  95 23 259200
   95 3 259200
   95 4 259200
   95 5 259200
@@ -908,50 +1299,190 @@ df.sr_t <- read.table(header = TRUE, text = 'numUAVs simRun duration
   95 7 259200
   95 8 259200
   95 9 259200
+  98 0 259200
+  98 1 259200
+  98 10 259200
+  98 11 259200
+  98 12 259200
+  98 13 259200
+  98 14 259200
+  98 15 259200
+  98 16 259200
+  98 17 259200
+  98 18 259200
+  98 19 259200
+  98 2 259200
+  98 20 259200
+  98 21 259200
+  98 22 259200
+  98 23 259200
+  98 3 259200
+  98 4 259200
+  98 5 259200
+  98 6 259200
+  98 7 259200
+  98 8 259200
+  98 9 259200
   100 0 259200
-  100 1 259200
   100 10 259200
   100 11 259200
-  100 2 259200
+  100 12 259200
+  100 13 259200
+  100 14 259200
+  100 15 259200
+  100 16 259200
+  100 17 259200
+  100 18 259200
+  100 19 259200
+  100 20 259200
+  100 21 259200
+  100 22 259200
+  100 23 259200
   100 3 259200
   100 4 259200
   100 5 259200
   100 6 259200
-  100 7 259200
   100 8 259200
   100 9 259200
-  150 0 259200
-  150 1 259200
-  150 11 259200
-  150 2 259200
-  150 3 259200
-  150 4 259200
-  150 5 259200
-  150 6 259200
-  150 7 259200
-  150 8 259200
-  150 9 259200
-  200 1 259200
-  200 10 259200
-  200 11 259200
-  200 2 259200
-  200 3 259200
-  200 4 259200
-  200 5 259200
-  200 6 259200
-  200 7 259200
-  200 8 259200
-  200 9 259200
-  400 0 259200
-  400 1 259200
-  400 10 259200
-  400 11 259200
-  400 2 259200
-  400 3 259200
-  400 4 259200
-  400 5 259200
-  400 6 259200
-  400 7 259200
+  150 0 259200 
+  150 1 259200 
+  150 10 259200 
+  150 11 259200 
+  150 12 259200 
+  150 13 259200 
+  150 14 259200 
+  150 15 259200 
+  150 16 259200 
+  150 17 259200 
+  150 18 259200 
+  150 19 259200 
+  150 2 259200 
+  150 20 259200 
+  150 21 259200 
+  150 22 259200 
+  150 23 259200 
+  150 3 259200 
+  150 4 259200 
+  150 5 259200 
+  150 6 259200 
+  150 8 259200 
+  150 9 259200 
+  200 0 259200 
+  200 1 259200 
+  200 10 259200 
+  200 11 259200 
+  200 12 259200 
+  200 13 259200
+  200 15 259200 
+  200 16 259200 
+  200 17 259200 
+  200 18 259200 
+  200 19 259200 
+  200 2 259200 
+  200 20 259200 
+  200 21 259200 
+  200 22 259200 
+  200 23 259200 
+  200 3 259200 
+  200 4 259200 
+  200 5 259200 
+  200 6 259200 
+  200 7 259200 
+  200 8 259200 
+  200 9 259200 
+  250 0 259200 
+  250 1 259200 
+  250 10 259200 
+  250 11 259200 
+  250 12 259200 
+  250 13 259200 
+  250 14 259200 
+  250 15 259200 
+  250 16 259200 
+  250 17 259200 
+  250 18 259200 
+  250 19 259200 
+  250 2 259200 
+  250 20 259200 
+  250 21 259200 
+  250 22 259200 
+  250 23 259200 
+  250 3 259200 
+  250 4 259200 
+  250 5 259200 
+  250 6 259200 
+  250 7 259200 
+  250 8 259200
+  300 0 259200 
+  300 1 259200 
+  300 10 259200 
+  300 11 259200 
+  300 12 259200 
+  300 13 259200 
+  300 14 259200 
+  300 15 259200 
+  300 16 259200 
+  300 17 259200 
+  300 18 259200 
+  300 19 259200 
+  300 2 259200 
+  300 20 259200 
+  300 21 259200 
+  300 22 259200 
+  300 23 259200 
+  300 3 259200 
+  300 4 259200 
+  300 5 259200 
+  300 6 259200 
+  300 7 259200 
+  300 8 259200 
+  300 9 259200 
+  350 0 259200 
+  350 1 259200 
+  350 10 259200 
+  350 11 259200 
+  350 12 259200 
+  350 13 259200 
+  350 14 259200 
+  350 15 259200 
+  350 16 259200 
+  350 17 259200 
+  350 18 259200 
+  350 19 259200 
+  350 2 259200 
+  350 20 259200 
+  350 21 259200 
+  350 22 259200 
+  350 23 259200 
+  350 3 259200 
+  350 4 259200 
+  350 5 259200 
+  350 6 259200 
+  350 7 259200 
+  350 8 259200 
+  350 9 259200 
+  400 0 259200 
+  400 1 259200 
+  400 10 259200 
+  400 11 259200 
+  400 12 259200 
+  400 13 259200 
+  400 14 259200 
+  400 15 259200 
+  400 16 259200 
+  400 17 259200 
+  400 18 259200 
+  400 19 259200 
+  400 2 259200 
+  400 20 259200 
+  400 21 259200 
+  400 22 259200 
+  400 23 259200 
+  400 3 259200 
+  400 4 259200 
+  400 5 259200 
+  400 6 259200 
+  400 7 259200 
   400 8 259200
   400 9 259200
 ')
@@ -962,9 +1493,45 @@ df.sr_t.long <- read.table(header = TRUE, text = 'numUAVs simRun duration
   55 1 125780.256641793666
   55 10 16175.15311631211
   55 11 14689.527549561394
+  55 12 297005.578312765382
+  55 13 117647.573994620745
+  55 14 551421.164899142481
+  55 15 14694.589987237309
+  55 16 132613.252492708795
+  55 17 43265.976210397325
+  55 18 113262.236548570913
+  55 19 112563.467617132723
   55 2 27213.129439727314
+  55 20 103933.732803648465
+  55 21 20808.595081149542
+  55 22 19171.002639192661
+  55 23 16868.981130428109
+  55 24 256984.531523318226
+  55 25 19205.653139292256
+  55 26 151416.251724504775
+  55 27 27227.681158182029
+  55 28 11961.962732207112
+  55 29 34343.903392569555
   55 3 13932.987959550739
+  55 30 20104.457314195511
+  55 31 13360.944535933922
+  55 32 105333.163702140126
+  55 33 110451.107051844901
+  55 34 66958.337910239038
+  55 35 15155.252899139218
+  55 36 91503.194194374649
+  55 37 14900.735876990608
+  55 38 20609.99070654717
+  55 39 165647.732444441912
   55 4 72880.315625093948
+  55 40 605911.06865890456
+  55 41 17158.860311602858
+  55 42 287809.093326070863
+  55 43 293923.146623653628
+  55 44 74490.441186072163
+  55 45 13923.356306644081
+  55 46 14601.496922525546
+  55 47 15413.460792629799
   55 5 13690.586931179329
   55 6 11483.581349291625
   55 7 18676.813609118913
@@ -972,36 +1539,87 @@ df.sr_t.long <- read.table(header = TRUE, text = 'numUAVs simRun duration
   55 9 33543.917212916884
   56 0 1209600
   56 1 1209600
+  56 10 1209600
+  56 11 1209600
+  56 12 1209600
+  56 13 1209600
+  56 14 1209600
+  56 15 1209600
+  56 16 1209600
+  56 17 1209600
+  56 18 1209600
+  56 19 1209600
   56 2 1209600
+  56 20 1209600
+  56 21 1209600
+  56 22 1209600
+  56 23 1209600
+  56 25 1209600
+  56 26 1025530.008584439415
+  56 27 1209600
+  56 28 1209600
+  56 29 1209600
   56 3 1209600
+  56 30 1209600
+  56 31 1209600
+  56 32 1209600
+  56 33 1209600
+  56 34 1209600
+  56 35 1209600
+  56 36 1209600
+  56 37 1209600
+  56 38 1209600
+  56 39 1209600
   56 4 1209600
+  56 40 1209600
+  56 41 1209600
+  56 42 1209600
+  56 43 1209600
+  56 44 1209600
+  56 45 1209600
+  56 46 1209600
+  56 47 1209600
   56 5 1209600
+  56 6 1209600
+  56 7 1209600
+  56 8 1209600
+  56 9 1209600
   57 0 1209600
   57 1 1209600
+  57 10 1209600
+  57 11 1209600
+  57 12 1209600
+  57 13 1209600
+  57 14 1209600
+  57 15 1209600
   57 2 1209600
   57 3 1209600
   57 4 1209600
   57 5 1209600
+  57 6 1209600
+  57 7 1209600
+  57 8 1209600
+  57 9 1209600
 ')
 
 plot1 <- ggplot(df.sr_t, aes(x=numUAVs, y=as.numeric(duration/3600))) +
   geom_vline(xintercept = 56, size=2*1.5, linetype = "solid", color = alpha(graphCol3, 0.3)) +
-  geom_point(color=graphCol1) +
+  geom_point(color=alpha(graphCol1, 1)) +
   #annotate("text", x = 58, y = 0.3, label = "$z_p = 15.0\\,\\mathrm{Wh} = \\mu$", color=graphCol3_dark, size = rel(2)) +
-  scale_x_log10(breaks=c(seq(0, 80, 10), seq(100, 500, 100))) +
+  scale_x_log10(breaks=c(seq(0, 80, 10), seq(100, 400, 50))) +
   scale_y_continuous(trans="log2", breaks=c(1, 6, 12, 24, 48, 72)) +
   #theme(axis.title.x = element_blank()) +
   labs(x="Available UAVs", y="Service Duration [h]")
 
 plot2 <- ggplot(df.sr_t.long, aes(x=numUAVs, y=as.numeric(duration/3600))) +
-  geom_point(color=graphCol1) +
+  geom_point(color=alpha(graphCol1, 1)) +
   #annotate("text", x = 58, y = 0.3, label = "$z_p = 15.0\\,\\mathrm{Wh} = \\mu$", color=graphCol3_dark, size = rel(2)) +
   scale_x_continuous(breaks=c(55,56,57)) +
   scale_y_continuous(trans="log2", breaks=c(1, 6, 12, 24, 48, 72,168, 336)) +
   theme(axis.title.y = element_blank()) +
   labs(x=" ", y="Service Duration [h] (extended cutoff)")
 
-tikz(paste(tikzLocation, "8_numUAVs_duration_plot_R.tex", sep = ""), standAlone=TRUE, timestamp = FALSE, width=5.9, height=2.6)
+tikz(paste(tikzLocation, "8_numUAVs_duration_plot_R.tex", sep = ""), standAlone=TRUE, timestamp=FALSE, width=textwidth, height=2.6)
 plot_grid(plot1, plot2, rel_widths = c(5, 1))
 dev.off()
 
@@ -1076,14 +1694,14 @@ for (numuavs in numUAVss) {
   ratios <- rbind(ratios, ratios.time)
   ratios <- rbind(ratios, ratios.energy)
 }
-ratios[ratios$numUAVs == 80 &ratios$ metric == "EnergyPerDay_kwh",]$value <- 82.4234
-ratios[ratios$numUAVs == 90 &ratios$ metric == "EnergyPerDay_kwh",]$value <- 82.4827
+#ratios[ratios$numUAVs == 80 &ratios$ metric == "EnergyPerDay_kwh",]$value <- 82.4234
+#ratios[ratios$numUAVs == 90 &ratios$ metric == "EnergyPerDay_kwh",]$value <- 82.4827
 
 ratios.red <- subset(ratios, class == "time" & metric == "Idle")
 ggplot(ratios.red, aes(x=numUAVs, y=value)) +
   geom_point(color=graphCol1) +
   #annotate("text", x = 58, y = 0.3, label = "$z_p = 15.0\\,\\mathrm{Wh} = \\mu$", color=graphCol3_dark, size = rel(2)) +
-  scale_x_log10(breaks=c(seq(0, 90, 10), seq(100, 500, 100))) +
+  scale_x_log10(breaks=c(seq(0, 90, 10), seq(100, 400, 50))) +
   scale_y_continuous(trans="log10") +
   labs(x="Available UAVs", y="Service Duration [h]")
 
@@ -1091,24 +1709,45 @@ ratios.red <- subset(ratios, class == "stat" & metric == "Efficiency")
 ggplot(ratios.red, aes(x=numUAVs, y=percentage)) +
   geom_point(color=graphCol1) +
   #annotate("text", x = 58, y = 0.3, label = "$z_p = 15.0\\,\\mathrm{Wh} = \\mu$", color=graphCol3_dark, size = rel(2)) +
-  scale_x_log10(breaks=c(seq(0, 90, 10), seq(100, 500, 100))) +
+  scale_x_log10(breaks=c(seq(0, 90, 10), seq(100, 400, 50))) +
   scale_y_continuous() +
   labs(x="Available UAVs", y="Energy Efficiency [\\%]")
 
+df2 <- aggregate(energyCharge~simRun+numUAVs, data=df, sum, na.rm=TRUE)
+df2$energyCharge <- df2$energyCharge / (simtimeSec / 3600 / 24) / 1000 * 14.8 / 1000
 
-tikz(paste(tikzLocation, "8_numUAVs_energydemand_plot_R.tex", sep = ""), standAlone=TRUE, timestamp = FALSE, width=5.9, height=2.0)
+df2[df2$numUAVs == 78 & df2$energyCharge > 83.1,]$energyCharge <- NA
+df2[df2$numUAVs == 150 & df2$energyCharge < 81.7,]$energyCharge <- NA
+df2[df2$numUAVs == 200 & df2$energyCharge < 81.0,]$energyCharge <- NA
+df2[df2$numUAVs == 350 & df2$energyCharge < 81.2,]$energyCharge <- NA
+df2[df2$numUAVs == 400 & df2$energyCharge < 81.2,]$energyCharge <- NA
+
+tikz(paste(tikzLocation, "8_numUAVs_energydemand_plot_R.tex", sep = ""), standAlone=TRUE, timestamp=FALSE, width=textwidth, height=2.3)
 
 ratios.red <- subset(ratios, class == "stat" & metric == "EnergyPerDay_kwh")
 ggplot(ratios.red, aes(x=numUAVs, y=value)) +
   geom_line(color=graphCol3) +
   geom_point(color=graphCol1) +
   #annotate("text", x = 58, y = 0.3, label = "$z_p = 15.0\\,\\mathrm{Wh} = \\mu$", color=graphCol3_dark, size = rel(2)) +
-  scale_x_log10(breaks=c(seq(0, 90, 10), seq(100, 500, 100))) +
+  scale_x_log10(breaks=c(seq(0, 90, 10), seq(100, 400, 50))) +
   scale_y_continuous() +
   labs(x="Available UAVs", y="Energy Demand [kW\\,h] / Day")
 
+ggplot(df2, aes(x=numUAVs, y=energyCharge)) +
+  geom_point(color=alpha(graphCol3_dark, 0.5)) +
+  geom_smooth(se = FALSE, span = 0.25, color=graphCol1) +
+  geom_line(data=ratios.red, aes(x=numUAVs, y=value), color=graphCol1) +
+  #geom_smooth(se = FALSE, span = 0.6, color=graphCol1) +
+  #stat_summary(fun.y = mean, geom = 'line', colour = 'blue') + 
+  #geom_boxplot(aes(group=numUAVs), color=graphCol3_dark, outlier.alpha = 0.8) +
+  #geom_jitter(color=graphCol1) +
+  #annotate("text", x = 58, y = 0.3, label = "$z_p = 15.0\\,\\mathrm{Wh} = \\mu$", color=graphCol3_dark, size = rel(2)) +
+  scale_x_log10(breaks=c(seq(0, 90, 10), seq(100, 400, 50))) +
+  scale_y_continuous() +
+  labs(x="Available UAVs", y="Energy Demand [kW\\,h] / Day")
 
 dev.off()
+
 
 
 #####################################################################
@@ -1175,4 +1814,3 @@ ggplot(subset(df.red.uav, replM==2)) + geom_bin2d(aes(x = 100 / (energyMission +
 #####################################################################
 #####################################################################
 cat("F I N I S H E D")
-
